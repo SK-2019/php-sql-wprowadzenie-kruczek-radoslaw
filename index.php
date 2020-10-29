@@ -1,3 +1,3 @@
 <?php
-echo("<h1>Radoasław Kruczek</h1>");
+echo("<h1>Radosław Kruczek</h1>");
 ?>
