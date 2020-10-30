@@ -20,7 +20,7 @@ echo("</table>");
 <?php
 //echo("<h1>Radosław Kruczek</h1>");
 $conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
-$sql = 'SELECT * FROM where imie like "%a"';
+$sql = 'SELECT * FROM tabela where imie like "%a"';
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
