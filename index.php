@@ -1,8 +1,9 @@
+
 <?php
 echo("<h1>Radosław Kruczek</h1>");
-$conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
+require_once("connect.php");
 $sql = 'SELECT * FROM tabela';
-echo("<li>Zadanie 1</li>");
+echo("<h2>Zadanie 1</h2>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -19,10 +20,9 @@ echo("<th>zarobki</th>");
 echo("</table>");
 ?>
 <?php
-//echo("<h1>Radosław Kruczek</h1>");
-$conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
+require_once("connect.php");
 $sql = 'SELECT * FROM tabela where imie like "%a"';
-echo("<li>Zadanie 2</li>");
+echo("<h2>Zadanie 2</h2>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -39,10 +39,9 @@ echo("<th>zarobki</th>");
 echo("</table>");
 ?>
 <?php
-//echo("<h1>Radosław Kruczek</h1>");
-$conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
+require_once("connect.php");
 $sql = 'SELECT * FROM tabela where dzial in(1, 2)';
-echo("<li>Zadanie 3</li>");
+echo("<h2>Zadanie 3</h2>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -59,10 +58,9 @@ echo("<th>zarobki</th>");
 echo("</table>");
 ?>
 <?php
-//echo("<h1>Radosław Kruczek</h1>");
-$conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
+require_once("connect.php");
 $sql = 'SELECT * FROM tabela where imie not like "%a" and dzial in(1, 3)';
-echo("<li>Zadanie 4</li>");
+echo("<h2>Zadanie 4</h2>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
@@ -79,10 +77,9 @@ echo("<th>zarobki</th>");
 echo("</table>");
 ?>
 <?php
-//echo("<h1>Radosław Kruczek</h1>");
-$conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
+require_once("connect.php");
 $sql = 'SELECT * FROM tabela where zarobki >30';
-echo("<li>Zadanie 5</li>");
+echo("<h2>Zadanie 5</h2>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
