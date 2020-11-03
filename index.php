@@ -1,23 +1,27 @@
-
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+</html>
 <?php
-echo("<h1>Radosław Kruczek</h1>");
-require_once("connect.php");
-$sql = 'SELECT * FROM tabela';
-echo("<h2>Zadanie 1</h2>");
-echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>imie</th>");
-echo("<th>dzial</th>");
-echo("<th>zarobki</th>");
+    echo("<h1>Radosław Kruczek</h1>");
+    require_once("connect.php");
+    $sql = 'SELECT * FROM tabela';
+    echo("<h2>Zadanie 1</h2>");
+    echo("<li>".$sql);
+    $result = $conn->query($sql);
+    echo("<table border=1>");
+    echo("<th>id</th>");
+    echo("<th>imie</th>");
+    echo("<th>dzial</th>");
+    echo("<th>zarobki</th>");
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
         echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>");
         echo("</tr>");
     }
-echo("</table>");
+    echo("</table>");
 ?>
 <?php
 require_once("connect.php");
