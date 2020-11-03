@@ -6,7 +6,7 @@
 <?php
     echo("<h1>Radosław Kruczek</h1>");
     require_once("connect.php");
-    $sql = 'SELECT * FROM tabela';
+    $sql = 'SELECT * FROM tabela where dzial = id_org';
     echo("<h2>Zadanie 1</h2>");
     echo("<li>".$sql);
     $result = $conn->query($sql);
