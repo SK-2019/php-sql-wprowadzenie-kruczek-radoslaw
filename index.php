@@ -3,6 +3,10 @@
         <link rel="stylesheet" href="style.css">
     </head>
 </html>
+<div class="nav">
+    <a href="orgPracownicy.php">Org i Prac </a>
+    <a href="agregat.php">Funkcje Agregujące </a>
+</div>
 <?php
     echo("<h1>Radosław Kruczek</h1>");
     require_once("connect.php");
