@@ -11,7 +11,7 @@
 <?php
 require_once("connect.php");
 $sql = 'SELECT max(zarobki) as maksymalne_zarobki FROM tabela, organizacja where dzial = id_org';
-echo("<h2>Zadanie 6</h2>");
+echo("<h2>Zadanie 1</h2>");
 echo("<h3>Wyświetl maksymalne zarobki</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -31,7 +31,7 @@ echo("</table>");
 <?php
 require_once("connect.php");
 $sql = 'SELECT avg(zarobki) as srednia_zarobkow FROM tabela, organizacja where dzial = id_org and dzial in(1, 3)';
-echo("<h2>Zadanie 7</h2>");
+echo("<h2>Zadanie 2</h2>");
 echo("<h3>Wyświetl średnią zarobków z działów serwis i marketing</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -51,7 +51,7 @@ echo("</table>");
 <?php
 require_once("connect.php");
 $sql = 'SELECT min(zarobki) as minimalne_zarobki FROM tabela, organizacja where dzial = id_org';
-echo("<h2>Zadanie 8</h2>");
+echo("<h2>Zadanie 3</h2>");
 echo("<h3>Wyświetl minmalne zarobki</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
