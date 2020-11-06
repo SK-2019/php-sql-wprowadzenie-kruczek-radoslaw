@@ -193,7 +193,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org order by imie asc';
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org order by imie desc';
 echo("<h2>Zadanie 10</h2>");
 echo("<h3>pracownicy posortowani malejąco wg imienia</h3>");
 echo("<li>".$sql);
@@ -213,7 +213,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and dzial = 3 order by imie desc';
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and dzial = 3 order by imie asc';
 echo("<h2>Zadanie 11</h2>");
 echo("<h3>pracownicy z działu 3 posortowani rosnąco po imieniu</h3>");
 echo("<li>".$sql);
@@ -233,7 +233,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie like "%a" order by imie desc';
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie like "%a" order by imie asc';
 echo("<h2>Zadanie 12</h2>");
 echo("<h3>kobiety posortowane po imieniu rosnąco</h3>");
 echo("<li>".$sql);
@@ -253,7 +253,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and dzial in(1, 3)  and imie like "%a" order by zarobki desc';
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and dzial in(1, 3)  and imie like "%a" order by zarobki asc';
 echo("<h2>Zadanie 13</h2>");
 echo("<h3>kobiety z działu 1 i 3 posortowane rosnąco po zarobkach</h3>");
 echo("<li>".$sql);
@@ -273,8 +273,8 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a" order by nazwa_dzial desc';
-echo("<h2>Zadanie 9</h2>");
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a" order by nazwa_dzial asc';
+echo("<h2>Zadanie 14</h2>");
 echo("<h3>Mężczyźni posortowani rosnąco po nazwie działu</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
@@ -293,8 +293,8 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a" order by zarobki desc';
-echo("<h2>Zadanie 9</h2>");
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a" order by zarobki asc';
+echo("<h2>Zadanie 15</h2>");
 echo("<h3>Mężczyźni posortowani rosnąco po wysokości zarobków</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
