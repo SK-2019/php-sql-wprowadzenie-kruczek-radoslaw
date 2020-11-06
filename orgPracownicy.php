@@ -109,3 +109,85 @@ echo("<th>zarobki</th>");
     }
 echo("</table>");
 ?>
+
+<?php
+require_once("connect.php");
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org';
+echo("<h2>Zadanie 6</h2>");
+echo("<h3>Pracownicy z nazwą działów</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>zarobki</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+
+<?php
+require_once("connect.php");
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and dzial in(1, 4)';
+echo("<h2>Zadanie 7</h2>");
+echo("<h3>Pracownicy z działu 1 i 4</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>zarobki</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie like "%a"';
+echo("<h2>Zadanie 8</h2>");
+echo("<h3>Lista Kobiet z nazwami działów</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>zarobki</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a"';
+echo("<h2>Zadanie 9</h2>");
+echo("<h3>Lista Mężczyzn z nazwami działów</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>zarobki</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
