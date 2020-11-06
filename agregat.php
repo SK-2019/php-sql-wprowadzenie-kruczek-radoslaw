@@ -137,3 +137,19 @@ echo("<th>ilosc_kobiet</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT sum(imie) as suma_zarobki FROM tabela, organizacja where dzial = id_org';
+echo("<h2>Zadanie 9</h2>");
+echo("<h3>suma zarobków w poszczególnych działach</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
