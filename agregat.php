@@ -145,9 +145,6 @@ echo("<h3>suma zarobków w poszczególnych działach</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<table border=1>");
-echo("<th>id</th>");
-echo("<th>imie</th>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>zarobki</th>");
     while($wiersz=$result->fetch_assoc()){
