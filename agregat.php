@@ -139,7 +139,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT sum(imie) as suma_zarobki FROM tabela, organizacja where dzial = id_org';
+$sql = 'SELECT sum(zarobki) FROM tabela, organizacja where dzial = id_org';
 echo("<h2>Zadanie 9</h2>");
 echo("<h3>suma zarobków w poszczególnych działach</h3>");
 echo("<li>".$sql);
