@@ -1,3 +1,3 @@
 <?php
-$conn = new mysqli('sql7.freemysqlhosting.net', 'sql7373527', 'uQnUsHq6FQ', 'sql7373527');
+$conn = new mysqli('mysql-radek.alwaysdata.net', 'radek', 'Radek2003!', 'radek_009');
 ?>
