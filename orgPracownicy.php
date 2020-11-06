@@ -273,7 +273,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a" order by nazwa_dzial asc';
+$sql = 'SELECT * FROM tabela, organizacja where dzial = id_org and imie not like "%a" order by id_org asc';
 echo("<h2>Zadanie 14</h2>");
 echo("<h3>Mężczyźni posortowani rosnąco po nazwie działu</h3>");
 echo("<li>".$sql);
