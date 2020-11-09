@@ -4,14 +4,16 @@
     </head>
 </html>
 <div class="nav">
-    <a href="index.php">strona główna </a>
     <a href="orgPracownicy.php">Org i Prac </a>
+    <a href="pracownicy.php">pracownicy</a>
+    <a href="Data_i_Czas.php">Data_i_czas</a>
+    <a href="index.php">strona główna </a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github </a>
 </div>
 
 <?php
 require_once("connect.php");
-$sql = 'SELECT sum(zarobki) as suma_zarobki FROM tabela, organizacja where dzial = id_org';
+$sql = 'SELECT sum(zarobki) as suma_zarobki FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 1</h2>");
 echo("<h3>suma zrobków wszystkich pracowników</h3>");
 echo("<li>".$sql);
@@ -27,7 +29,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT sum(zarobki) as suma_zarobki_kobiet FROM tabela, organizacja where dzial = id_org and imie like "%a"';
+$sql = 'SELECT sum(zarobki) as suma_zarobki_kobiet FROM pracownicy, organizacja where dzial = id_org and imie like "%a"';
 echo("<h2>Zadanie 2</h2>");
 echo("<h3>suma zarobków kobiet</h3>");
 echo("<li>".$sql);
@@ -43,7 +45,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT sum(zarobki) as suma_zarobki_mezczyzn FROM tabela, organizacja where dzial = id_org and imie not like "%a" and dzial in(2, 3)';
+$sql = 'SELECT sum(zarobki) as suma_zarobki_mezczyzn FROM pracownicy, organizacja where dzial = id_org and imie not like "%a" and dzial in(2, 3)';
 echo("<h2>Zadanie 3</h2>");
 echo("<h3>suma zarobków mężczyzn w dziale 2 i 3</h3>");
 echo("<li>".$sql);
@@ -59,7 +61,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT avg(zarobki) as srednia_zarobki_mezczyzn FROM tabela, organizacja where dzial = id_org and imie not like "%a" and dzial in(2, 3)';
+$sql = 'SELECT avg(zarobki) as srednia_zarobki_mezczyzn FROM pracownicy, organizacja where dzial = id_org and imie not like "%a" and dzial in(2, 3)';
 echo("<h2>Zadanie 4</h2>");
 echo("<h3>średnia zarobków wszystkich mężczyzn</h3>");
 echo("<li>".$sql);
@@ -75,7 +77,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT avg(zarobki) as srednia_zarobki_pracownicy FROM tabela, organizacja where dzial = id_org and dzial = 4';
+$sql = 'SELECT avg(zarobki) as srednia_zarobki_pracownicy FROM pracownicy, organizacja where dzial = id_org and dzial = 4';
 echo("<h2>Zadanie 5</h2>");
 echo("<h3>średnia zarobków pracowników z działu 4</h3>");
 echo("<li>".$sql);
@@ -91,7 +93,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT avg(zarobki) as srednia_zarobki_mezczyzn FROM tabela, organizacja where dzial = id_org and imie not like "%a" and dzial in(1, 2)';
+$sql = 'SELECT avg(zarobki) as srednia_zarobki_mezczyzn FROM pracownicy, organizacja where dzial = id_org and imie not like "%a" and dzial in(1, 2)';
 echo("<h2>Zadanie 6</h2>");
 echo("<h3>średnia zarobków mężczyzn z działów 1 i 2</h3>");
 echo("<li>".$sql);
@@ -107,7 +109,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT count(imie) as ilosc_pracownicy FROM tabela, organizacja where dzial = id_org';
+$sql = 'SELECT count(imie) as ilosc_pracownicy FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 7</h2>");
 echo("<h3>ilu jest wszystkich pracowników</h3>");
 echo("<li>".$sql);
@@ -123,7 +125,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT count(imie) as ilosc_kobiet FROM tabela, organizacja where dzial = id_org and imie like "%a" and dzial in(1, 3)';
+$sql = 'SELECT count(imie) as ilosc_kobiet FROM pracownicy, organizacja where dzial = id_org and imie like "%a" and dzial in(1, 3)';
 echo("<h2>Zadanie 8</h2>");
 echo("<h3>ile kobiet pracuje łącznie w działach 1 i 3 </h3>");
 echo("<li>".$sql);
@@ -133,6 +135,159 @@ echo("<th>ilosc_kobiet</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
         echo("<td>".$wiersz['ilosc_kobiet']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, sum(zarobki) FROM pracownicy, organizacja where dzial = id_org group by dzial';
+echo("<h2>Zadanie 9</h2>");
+echo("<h3>suma zarobków w poszczególnych działach</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>sum(zarobki)</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['sum(zarobki)']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, count(imie) FROM pracownicy, organizacja where dzial = id_org group by dzial';
+echo("<h2>Zadanie 10</h2>");
+echo("<h3>ilość pracowników w poszczególnych działach</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>count(imie)</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['count(imie)']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, avg(zarobki) FROM pracownicy, organizacja where dzial = id_org group by dzial';
+echo("<h2>Zadanie 11</h2>");
+echo("<h3>średnie zarobków w poszczególnych działach</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>avg(zarobki)</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['avg(zarobki)']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT sum(zarobki) as sum, if( (imie like "%a"), "mężczyźni","kobiety") as "plec" FROM pracownicy group by plec';
+echo("<h2>Zadanie 12</h2>");
+echo("<h3>suma zarobków kobiet i mężczyzn</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>suma_zarobków</th>");
+echo("<th>płeć</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['sum']."</td><td>".$wiersz['plec']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT avg(zarobki) as avg, if( (imie like "%a"), "mężczyźni","kobiety") as "plec" FROM pracownicy group by plec';
+echo("<h2>Zadanie 13</h2>");
+echo("<h3>średnia zarobków kobiet i mężczyzn</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>średnia_zarobków</th>");
+echo("<th>płeć</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['avg']."</td><td>".$wiersz['plec']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, sum(zarobki) FROM pracownicy, organizacja where dzial = id_org group by dzial having sum(zarobki) < 28';
+echo("<h2>Zadanie 14</h2>");
+echo("<h3>suma zarobków w poszczególnych działach mniejsza niż 28</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>suma_zarobków</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['sum(zarobki)']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, avg(zarobki) FROM pracownicy, organizacja where dzial = id_org and imie not like "%a" group by dzial having sum(zarobki) > 30';
+echo("<h2>Zadanie 15</h2>");
+echo("<h3>średnie zarobków mężczyzn w poszczególnych działach większe od 30</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>średnia_zarobków</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['avg(zarobki)']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, sum(zarobki) FROM pracownicy, organizacja where dzial = id_org group by dzial having sum(zarobki) < 28';
+echo("<h2>Zadanie 16</h2>");
+echo("<h3>suma zarobków w poszczególnych działach mniejsza niż 28</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>suma_zarobków</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['sum(zarobki)']."</td>"); 
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT nazwa_dzial, count(imie) FROM pracownicy, organizacja where dzial = id_org group by dzial having count(imie) > 3';
+echo("<h2>Zadanie 17</h2>");
+echo("<h3>ilość pracowników w poszczególnych działach większa niż 3</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>nazwa_dzial</th>");
+echo("<th>ilość_pracowników</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['count(imie)']."</td>"); 
         echo("</tr>");
     }
 echo("</table>");
