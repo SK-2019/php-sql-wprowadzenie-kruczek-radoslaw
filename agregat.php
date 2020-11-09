@@ -258,27 +258,11 @@ echo("<th>średnia_zarobków</th>");
     }
 echo("</table>");
 ?>
-<?php
-require_once("connect.php");
-$sql = 'SELECT nazwa_dzial, sum(zarobki) FROM pracownicy, organizacja where dzial = id_org group by dzial having sum(zarobki) < 28';
-echo("<h2>Zadanie 16</h2>");
-echo("<h3>suma zarobków w poszczególnych działach mniejsza niż 28</h3>");
-echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=1>");
-echo("<th>nazwa_dzial</th>");
-echo("<th>suma_zarobków</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['sum(zarobki)']."</td>"); 
-        echo("</tr>");
-    }
-echo("</table>");
-?>
+
 <?php
 require_once("connect.php");
 $sql = 'SELECT nazwa_dzial, count(imie) FROM pracownicy, organizacja where dzial = id_org group by dzial having count(imie) > 3';
-echo("<h2>Zadanie 17</h2>");
+echo("<h2>Zadanie 16</h2>");
 echo("<h3>ilość pracowników w poszczególnych działach większa niż 3</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
