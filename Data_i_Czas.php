@@ -120,7 +120,7 @@ echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<th>suma lat z działu handel</th>");
+echo("<th>średnia lat z poszczególnych działów</th>");
 echo("<th>dzial</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
