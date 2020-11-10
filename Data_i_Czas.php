@@ -114,7 +114,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 2 and imie not like "%a" group by dzial';
+$sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM pracownicy, organizacja where dzial = id_org and imie not like "%a" group by dzial';
 echo("<h2>Zadanie 7</h2>");
 echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
 echo("<li>".$sql);
