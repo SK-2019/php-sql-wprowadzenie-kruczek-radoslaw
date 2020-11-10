@@ -96,3 +96,19 @@ echo("<th>suma lat z działu handel</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 2 and imie not like "%a"';
+echo("<h2>Zadanie 6</h2>");
+echo("<h3>suma lat mężczyzn z działu handel</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>suma lat z działu handel</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['suma_wiek']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
