@@ -59,7 +59,7 @@ echo("<table border=1>");
 echo("<th>suma lat</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['suma_lat']."</td>");
+        echo("<td>".$wiersz['suma_wiek']."</td>");
         echo("</tr>");
     }
 echo("</table>");
