@@ -112,3 +112,20 @@ echo("<th>suma lat z działu handel</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 2 and imie not like "%a" group by dzial';
+echo("<h2>Zadanie 7</h2>");
+echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=1>");
+echo("<th>suma lat z działu handel</th>");
+echo("<th>dzial</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['srednia_wiek']."</td><td>".$wiersz['nazwa_dzial']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
