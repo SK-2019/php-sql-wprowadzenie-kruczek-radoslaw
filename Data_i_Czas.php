@@ -50,7 +50,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 1';
+$sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 3</h2>");
 echo("<h3>suma lat wszystkich pracowników</h3>");
 echo("<li>".$sql);
@@ -59,7 +59,7 @@ echo("<table border=1>");
 echo("<th>suma lat</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['suma_lat']."</td><td>");
+        echo("<td>".$wiersz['suma_lat']."</td>");
         echo("</tr>");
     }
 echo("</table>");
