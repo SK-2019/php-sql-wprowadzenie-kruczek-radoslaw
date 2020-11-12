@@ -159,7 +159,7 @@ echo("<th>najstarszy pracownik</th>");
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['najstarszy']."</td>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td>");
         echo("</tr>");
     }
 echo("</table>");
