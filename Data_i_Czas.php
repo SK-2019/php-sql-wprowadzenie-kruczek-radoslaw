@@ -154,11 +154,12 @@ echo("<h3>najstarsi pracownicy w każdym dziale</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=1>");
-echo("<th>najstarszy pracownik</th>");
 echo("<th>dzial</th>");
+echo("<th>najstarszy pracownik</th>");
+
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['najstarszy']."</td><td>".$wiersz['nazwa_dzial']."</td>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['najstarszy']."</td>");
         echo("</tr>");
     }
 echo("</table>");
