@@ -6,9 +6,7 @@ h1 {
     display: flex;
     justify-content: center;
     color: rgb(55, 51, 82);
-    font-style:oblique ;
     text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
-    background-color: rgb(182, 122, 12);
 }
 table{
     border-collapse: collapse;
