@@ -148,7 +148,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT nazwa_dzial, max(YEAR(curdate())-YEAR(data_urodzenia)) AS najstarszy FROM pracownicy, organizacja where dzial = id_org group by dzial';
+$sql = 'SELECT *, max(YEAR(curdate())-YEAR(data_urodzenia)) AS najstarszy FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 9</h2>");
 echo("<h3>najstarsi pracownicy w każdym dziale</h3>");
 echo("<li>".$sql);
