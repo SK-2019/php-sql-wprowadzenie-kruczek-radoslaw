@@ -30,6 +30,7 @@ a {
   text-decoration: none;
   background-color: red;
   padding: 1rem;
+  color: black;
 }
 a:hover {
   background-color: chartreuse;
