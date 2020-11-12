@@ -26,3 +26,11 @@ th {
   background-color: #5da85f;
   color: white;
 }
+a {
+  text-decoration: none;
+  background-color: blueviolet;
+  padding: 1rem;
+}
+a:hover {
+  background-color: chartreuse;
+}
