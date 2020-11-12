@@ -5,10 +5,10 @@
 </html>
 <div class="nav">
     <a href="pracownicy.php">pracownicy</a>
-    <a href="agregat.php">Funkcje Agregujące </a>
-    <a href="orgPracownicy.php">Prac i Org </a>
-    <a href="index.php">strona główna </a>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github </a>
+    <a href="agregat.php">Funkcje Agregujące</a>
+    <a href="orgPracownicy.php">Prac i Org</a>
+    <a href="index.php">strona główna</a>
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 </div>
 
 
