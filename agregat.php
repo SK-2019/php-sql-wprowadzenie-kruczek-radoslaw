@@ -18,7 +18,7 @@ echo("<h2>Zadanie 1</h2>");
 echo("<h3>suma zrobków wszystkich pracowników</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>suma_zarobki</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -34,7 +34,7 @@ echo("<h2>Zadanie 2</h2>");
 echo("<h3>suma zarobków kobiet</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>suma_zarobki_kobiet</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -50,7 +50,7 @@ echo("<h2>Zadanie 3</h2>");
 echo("<h3>suma zarobków mężczyzn w dziale 2 i 3</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>suma_zarobki_mezczyzn</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -66,7 +66,7 @@ echo("<h2>Zadanie 4</h2>");
 echo("<h3>średnia zarobków wszystkich mężczyzn</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>srednia_zarobki_mezczyzn</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -82,7 +82,7 @@ echo("<h2>Zadanie 5</h2>");
 echo("<h3>średnia zarobków pracowników z działu 4</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>srednia_zarobki_pracownicy</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -98,7 +98,7 @@ echo("<h2>Zadanie 6</h2>");
 echo("<h3>średnia zarobków mężczyzn z działów 1 i 2</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>srednia_zarobki_mezczyzn</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -114,7 +114,7 @@ echo("<h2>Zadanie 7</h2>");
 echo("<h3>ilu jest wszystkich pracowników</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>ilosc_pracownicy</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -130,7 +130,7 @@ echo("<h2>Zadanie 8</h2>");
 echo("<h3>ile kobiet pracuje łącznie w działach 1 i 3 </h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>ilosc_kobiet</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
@@ -146,7 +146,7 @@ echo("<h2>Zadanie 9</h2>");
 echo("<h3>suma zarobków w poszczególnych działach</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>sum(zarobki)</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -163,7 +163,7 @@ echo("<h2>Zadanie 10</h2>");
 echo("<h3>ilość pracowników w poszczególnych działach</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>count(imie)</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -180,7 +180,7 @@ echo("<h2>Zadanie 11</h2>");
 echo("<h3>średnie zarobków w poszczególnych działach</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>avg(zarobki)</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -197,7 +197,7 @@ echo("<h2>Zadanie 12</h2>");
 echo("<h3>suma zarobków kobiet i mężczyzn</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>suma_zarobków</th>");
 echo("<th>płeć</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -214,7 +214,7 @@ echo("<h2>Zadanie 13</h2>");
 echo("<h3>średnia zarobków kobiet i mężczyzn</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>średnia_zarobków</th>");
 echo("<th>płeć</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -231,7 +231,7 @@ echo("<h2>Zadanie 14</h2>");
 echo("<h3>suma zarobków w poszczególnych działach mniejsza niż 28</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>suma_zarobków</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -248,7 +248,7 @@ echo("<h2>Zadanie 15</h2>");
 echo("<h3>średnie zarobków mężczyzn w poszczególnych działach większe od 30</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>średnia_zarobków</th>");
     while($wiersz=$result->fetch_assoc()){
@@ -266,7 +266,7 @@ echo("<h2>Zadanie 16</h2>");
 echo("<h3>ilość pracowników w poszczególnych działach większa niż 3</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=1>");
+echo("<table border=0>");
 echo("<th>nazwa_dzial</th>");
 echo("<th>ilość_pracowników</th>");
     while($wiersz=$result->fetch_assoc()){

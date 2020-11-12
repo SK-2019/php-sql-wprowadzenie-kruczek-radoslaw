@@ -19,7 +19,7 @@
     echo("<h3>Pracownicy tylko z działu 2</h3>");
     echo("<li>".$sql);
     $result = $conn->query($sql);
-    echo("<table border=1>");
+    echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
     echo("<th>imie</th>");
     echo("<th>nazwa_dzial</th>");
@@ -38,7 +38,7 @@
     echo("<h3>Pracownicy tylko z działu 2 i z działu 3</h3>");
     echo("<li>".$sql);
     $result = $conn->query($sql);
-    echo("<table border=1>");
+    echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
     echo("<th>imie</th>");
     echo("<th>nazwa_dzial</th>");
@@ -57,7 +57,7 @@
     echo("<h3>Pracownicy tylko z działu 2</h3>");
     echo("<li>".$sql);
     $result = $conn->query($sql);
-    echo("<table border=1>");
+    echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
     echo("<th>imie</th>");
     echo("<th>nazwa_dzial</th>");
