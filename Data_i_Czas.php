@@ -416,7 +416,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as dzien FROM pracownicy ORDER BY
+$sql = 'SELECT DATE_FORMAT(data_urodzenia, "%W")) as dzien_t, Count(DATE_FORMAT(data_urodzenia, "%W")) as ilosc FROM pracownicy ORDER BY
 CASE
      
      WHEN dzien = "poniedziałek" THEN 1
@@ -432,11 +432,11 @@ echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
+echo("<th>dzień tygodnia</th>");
 echo("<th>ilość osób</th>");
-
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['dzien']."</td>");
+        echo("<td>".$wiersz['dzien_t']."</td><td>".$wiersz['ilosc']."</td>");
         echo("</tr>");
     }
 echo("</table>");
