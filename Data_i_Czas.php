@@ -432,12 +432,11 @@ echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
-echo("<th>dzień</th>");
 echo("<th>ilość osób</th>");
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['dzien']."</td><td>".$wiersz['imie']."</td>");
+        echo("<td>".$wiersz['dzien']."</td>");
         echo("</tr>");
     }
 echo("</table>");
