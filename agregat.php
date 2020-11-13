@@ -61,7 +61,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT avg(zarobki) as srednia_zarobki_mezczyzn FROM pracownicy, organizacja where dzial = id_org and imie not like "%a" and dzial in(2, 3)';
+$sql = 'SELECT avg(zarobki) as srednia_zarobki_mezczyzn FROM pracownicy, organizacja where dzial = id_org and imie not like "%a"';
 echo("<h2>Zadanie 4</h2>");
 echo("<h3>średnia zarobków wszystkich mężczyzn</h3>");
 echo("<li>".$sql);
