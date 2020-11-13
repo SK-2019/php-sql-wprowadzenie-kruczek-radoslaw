@@ -414,3 +414,31 @@ echo("<th>ilość pracowników urodzonych w poniedziałek</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as dzien FROM pracownicy ORDER BY
+CASE
+     
+     WHEN dzien = "poniedziałek" THEN 1
+     WHEN dzien = "wtorek" THEN 2
+     WHEN dzien = "środa" THEN 3
+     WHEN dzien= "czwartek" THEN 4
+     WHEN dzien = "piątek" THEN 5
+     WHEN dzien = "sobota" THEN 6
+     WHEN dzien = "niedziela" THEN 7
+END ASC';
+echo("<h2>Zadanie 23</h2>");
+echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>dzień</th>");
+echo("<th>ilość osób</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['dzien']."</td><td>".$wiersz['imie']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
