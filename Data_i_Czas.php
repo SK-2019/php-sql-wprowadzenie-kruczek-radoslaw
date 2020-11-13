@@ -375,13 +375,13 @@ pracownicy
 ORDER BY 
 CASE
      
-     WHEN dzien = "Monday" THEN 1
-     WHEN dzien = "Tuesday" THEN 2
-     WHEN dzien = "Wednesday" THEN 3
-     WHEN dzien= "Thursday" THEN 4
-     WHEN dzien = "Friday" THEN 5
-     WHEN dzien = "Saturday" THEN 6
-     WHEN dzien = "Sunday" THEN 7
+     WHEN dzien = "poniedziałek" THEN 1
+     WHEN dzien = "wtorek" THEN 2
+     WHEN dzien = "środa" THEN 3
+     WHEN dzien= "czwartek" THEN 4
+     WHEN dzien = "piątek" THEN 5
+     WHEN dzien = "sobota" THEN 6
+     WHEN dzien = "niedziela" THEN 7
 END ASC';
 echo("<h2>Zadanie 21</h2>");
 echo("<h3>Pracownicy z nazwami dni tygodnia, w których się urodzili z sortowaniem od Poniedziałku do Niedzieli</h3>");
