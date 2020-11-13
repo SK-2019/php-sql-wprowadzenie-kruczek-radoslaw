@@ -311,3 +311,23 @@ echo("<th>godzina</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
+echo("<h2>Zadanie 18</h2>");
+echo("<h3>Wyświetl datę urodzenia w formie: rok-miesiąc-dzień</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>dzial</th>");
+echo("<th>zarobki</th>");
+echo("<th>data urodzenia</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['DATE_FORMAT(data_urodzenia,"%Y-%M-%W")']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
