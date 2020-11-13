@@ -416,17 +416,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT DATE_FORMAT(data_urodzenia, "%W")) as dzien_t, Count(DATE_FORMAT(data_urodzenia, "%W")) as ilosc FROM pracownicy ORDER BY
-CASE
-     
-     WHEN dzien = "poniedziałek" THEN 1
-     WHEN dzien = "wtorek" THEN 2
-     WHEN dzien = "środa" THEN 3
-     WHEN dzien= "czwartek" THEN 4
-     WHEN dzien = "piątek" THEN 5
-     WHEN dzien = "sobota" THEN 6
-     WHEN dzien = "niedziela" THEN 7
-END ASC';
+$sql = 'SELECT Count(DATE_FORMAT(data_urodzenia,"%W")) as ilosc, DATE_FORMAT(data_urodzenia,"%W") as dzien FROM pracownicy group by dzien ORDER BY CASE WHEN dzien = "Poniedziałek" THEN 1 WHEN dzien = "Wtorek" THEN 2 WHEN dzien = "Środa" THEN 3 WHEN dzien= "Czwartek" THEN 4 WHEN dzien = "Piątek" THEN 5 WHEN dzien = "Sobota" THEN 6 WHEN dzien = "Niedziela" THEN 7 END ASC';
 echo("<h2>Zadanie 23</h2>");
 echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
 echo("<li>".$sql);
@@ -436,7 +426,7 @@ echo("<th>dzień tygodnia</th>");
 echo("<th>ilość osób</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['dzien_t']."</td><td>".$wiersz['ilosc']."</td>");
+        echo("<td>".$wiersz['dzien']."</td><td>".$wiersz['ilosc']."</td>");
         echo("</tr>");
     }
 echo("</table>");
