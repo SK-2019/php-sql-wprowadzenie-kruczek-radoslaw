@@ -366,3 +366,30 @@ echo("<th>dzień urodzenia</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT
+DATE_FORMAT(data_urodzenia,"%W") as dzien, imie, data_urodzenia FROM pracownicy ORDER BY CASE
+     WHEN dzien = "Monday" THEN 1
+     WHEN dzien = "Tuesday" THEN 2
+     WHEN dzien = "Wednesday" THEN 3
+     WHEN dzien= "Thursday" THEN 4
+     WHEN dzien = "Friday" THEN 5
+     WHEN dzien = "Saturday" THEN 6
+     WHEN dzien = "Sunday" THEN 7
+END ASC';
+echo("<h2>Zadanie 21</h2>");
+echo("<h3>Pracownicy z nazwami dni tygodnia, w których się urodzili z sortowaniem od Poniedziałku do Niedzieli</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>dzień</th>");
+echo("<th>imie</th>");
+echo("<th>data urodzenia</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['dzien']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['data_urodzenia']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
