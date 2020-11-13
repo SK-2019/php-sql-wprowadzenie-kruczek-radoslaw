@@ -369,7 +369,12 @@ echo("</table>");
 <?php
 require_once("connect.php");
 $sql = 'SELECT
-DATE_FORMAT(data_urodzenia,"%W") as dzien, imie, data_urodzenia FROM pracownicy ORDER BY CASE
+DATE_FORMAT(data_urodzenia,"%W") as dzien, imie, data_urodzenia
+FROM
+pracownicy
+ORDER BY 
+CASE
+     
      WHEN dzien = "Monday" THEN 1
      WHEN dzien = "Tuesday" THEN 2
      WHEN dzien = "Wednesday" THEN 3
