@@ -331,3 +331,21 @@ echo("<th>data urodzenia</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy';
+echo("<h2>Zadanie 19</h2>");
+echo("<h3>Ile godzin, minut już żyjesz</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>dni</th>");
+echo("<th>godziny</th>");
+echo("<th>minuty</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['dni']."</td><td>".$wiersz['godziny']."</td><td>".$wiersz['minuty']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
