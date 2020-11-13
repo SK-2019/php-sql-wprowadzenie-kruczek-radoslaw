@@ -338,8 +338,8 @@ echo("<h2>Zadanie 19</h2>");
 echo("<h3>Ile godzin, minut już żyjesz</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
-echo("<table border=0>")
-echo("<th>imie</th>");;
+echo("<table border=0>");
+echo("<th>imie</th>");
 echo("<th>dni</th>");
 echo("<th>godziny</th>");
 echo("<th>minuty</th>");
