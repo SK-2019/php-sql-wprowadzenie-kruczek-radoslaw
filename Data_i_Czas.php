@@ -220,7 +220,7 @@ echo("</table>");
 require_once("connect.php");
 $sql = 'SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie NOT LIKE "%a" ORDER BY data_urodzenia ASC LIMIT 1';
 echo("<h2>Zadanie 13</h2>");
-echo("<h3>długość życia pracowników w dniach</h3>");
+echo("<h3>najstarszy mężczyzna</h3>");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
@@ -231,6 +231,26 @@ echo("<th>data urodzenia</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
         echo("<td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,'%W-%m-%Y') from pracownicy';
+echo("<h2>Zadanie 14</h2>");
+echo("<h3>wyświetl nazwy dni w dacie urodzenia</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>dzial</th>");
+echo("<th>zarobki</th>");
+echo("<th>data urodzenia</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
         echo("</tr>");
     }
 echo("</table>");
