@@ -156,10 +156,28 @@ $result = $conn->query($sql);
 echo("<table border=0>");
 echo("<th>dzial</th>");
 echo("<th>najstarszy pracownik</th>");
-
+echo("<th>wiek</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['najstarszy']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM pracownicy, organizacja where dzial = id_org and dzial in(1, 2) group by dzial';
+echo("<h2>Zadanie 10</h2>");
+echo("<h3>najmłodsi pracownicy z działu handel i serwis</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>dzial</th>");
+echo("<th>najstarszy pracownik</th>");
+echo("<th>wiek</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['najmlodszy']."</td>");
         echo("</tr>");
     }
 echo("</table>");
