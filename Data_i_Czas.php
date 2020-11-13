@@ -275,3 +275,23 @@ echo("<th>nazwa dnia</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%M") from pracownicy';
+echo("<h2>Zadanie 16</h2>");
+echo("<h3>wyświetl nazwy miesięcy w dacie urodzenia</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>id</th>");
+echo("<th>imie</th>");
+echo("<th>dzial</th>");
+echo("<th>zarobki</th>");
+echo("<th>data urodzenia</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['DATE_FORMAT(data_urodzenia,"%M")']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
