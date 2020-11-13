@@ -237,7 +237,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,'%W-%m-%Y') from pracownicy';
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W-%m-%Y") from pracownicy';
 echo("<h2>Zadanie 14</h2>");
 echo("<h3>wyświetl nazwy dni w dacie urodzenia</h3>");
 echo("<li>".$sql);
