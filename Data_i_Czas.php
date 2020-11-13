@@ -295,3 +295,19 @@ echo("<th>data urodzenia</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT curtime(4) as godzina';
+echo("<h2>Zadanie 17</h2>");
+echo("<h3>Obecna, dokładna godzina</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>godzina</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['godzina']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
