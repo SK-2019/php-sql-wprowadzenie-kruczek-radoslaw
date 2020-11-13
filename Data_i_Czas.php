@@ -255,3 +255,23 @@ echo("<th>data urodzenia</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql1 = 'SET lc_time_names = "pl_PL"';
+$sql2 = 'SELECT DATE_FORMAT(CURDATE(), "%W") as data';
+echo("<h2>Zadanie 15</h2>");
+echo("<h3>Wypisz dzisiejszą nzawę dnia po polsku</h3>");
+echo("<li>".$sql1);
+echo("<li>".$sql2);
+$result = $conn->query($sql1);
+$result = $conn->query($sql2);
+echo("<table border=0>");
+echo("<th>nazwa dnia</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['data']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
