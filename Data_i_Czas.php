@@ -400,7 +400,7 @@ echo("</table>");
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as IloscPracUr_Monday FROM pracownicy where DATE_FORMAT(data_urodzenia, "%W")="Monday"';
+$sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as IloscPracUr_Monday FROM pracownicy where DATE_FORMAT(data_urodzenia, "%W")="poniedziałek"';
 echo("<h2>Zadanie 22</h2>");
 echo("<h3>Ilu pracowników urodziło się w poniedziałek</h3>");
 echo("<li>".$sql);
