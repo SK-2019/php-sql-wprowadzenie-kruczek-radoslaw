@@ -190,11 +190,28 @@ echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
 echo("<th>dzial</th>");
-echo("<th>najstarszy pracownik</th>");
+echo("<th>najmłodszy pracownik</th>");
 echo("<th>wiek</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
         echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['najmlodszy']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) AS dni_zycia FROM pracownicy';
+echo("<h2>Zadanie 12</h2>");
+echo("<h3>długość życia pracowników w dniach</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>imie</th>");
+echo("<th>dni życia</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['imie']."</td><td>".$wiersz['dni_zycia']."</td>");
         echo("</tr>");
     }
 echo("</table>");
