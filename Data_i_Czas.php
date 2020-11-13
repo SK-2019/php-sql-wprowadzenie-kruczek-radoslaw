@@ -350,3 +350,19 @@ echo("<th>minuty</th>");
     }
 echo("</table>");
 ?>
+<?php
+require_once("connect.php");
+$sql = 'SELECT DATE_FORMAT("2003-08-08", "%j") as NrDniaRoku_Urodzenie';
+echo("<h2>Zadanie 20</h2>");
+echo("<h3>W którym dniu roku urodziłeś się</h3>");
+echo("<li>".$sql);
+$result = $conn->query($sql);
+echo("<table border=0>");
+echo("<th>dzień urodzenia</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['NrDniaRoku_Urodzenie']."</td>");
+        echo("</tr>");
+    }
+echo("</table>");
+?>
