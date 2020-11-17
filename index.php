@@ -2,6 +2,12 @@
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
+    <body>
+    <form action="strona.php" method="POST">
+        <input type="text" name="name"> 
+        <input type="submit" name="wyślij w świat">
+    </form>
+</body>
 </html>
 <div class="nav">
     <a href="orgPracownicy.php">Org i Prac</a>
