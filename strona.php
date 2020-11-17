@@ -1,8 +1,8 @@
 <?php
 
 echo("<h1>strona.php</h1>");
-echo($_POST['firstname']);
-echo($_POST['lastname']);
-echo($_POST['password']);
-echo($_POST['title']);
+echo($_POST['<br>firstname</br>']);
+echo($_POST['<br>lastname</br>']);
+echo($_POST['<br>password</br>']);
+echo($_POST['<br>title</br>']);
 ?>
