@@ -13,6 +13,7 @@
     <a href="Data_i_Czas.php">Data i czas</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     <a href="formularz.html">formularz</a>
+    <a href="insert.php">stwórz pracownika</a>
 </div>
 <?php
     echo("<h1>Radosław Kruczek</h1>");
