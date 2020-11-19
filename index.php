@@ -3,13 +3,7 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-    <form action="strona.php" method="POST">
-        <input type="text" name="firstname"></br>
-        <input type="text" name="lastname"></br>
-        <input type="text" name="password"></br>
-        <input type="text" name="title"></br>
-        <input type="submit" name="wyślij w świat">
-    </form>
+
 </body>
 </html>
 <div class="nav">
