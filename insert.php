@@ -1,9 +1,9 @@
 <?php
 echo("jestes w insert.php <br>");
-// echo "<li>". $_POST['name'];
-// echo "<li>". $_POST['dzial'];
-// echo "<li>". $_POST['zarobki'];
-// echo "<li>". $_POST['data_urodzenia'];
+echo "<li>". $_POST['name'];
+echo "<li>". $_POST['dzial'];
+echo "<li>". $_POST['zarobki'];
+echo "<li>". $_POST['data_urodzenia'];
 
 
 // require_once("connect.php");
