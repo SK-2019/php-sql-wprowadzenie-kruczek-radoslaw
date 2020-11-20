@@ -13,6 +13,7 @@
     <a href="Data_i_Czas.php">Data i czas</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     <a href="daneDoBazy.html">Dane do Bazy</a>
+    <a href="formularz.html">Formularz</a>
     
 </div>
 <?php
