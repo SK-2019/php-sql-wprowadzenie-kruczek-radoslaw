@@ -11,11 +11,11 @@
 	
 	echo("<ul>");
 	
-    echo("<li>".$_POST["firstname"]);
-    echo("<li>".$_POST["lastname"]);
-    echo("<li>".$_POST["city"]);
-    echo("<li>".$_POST["phone"]);
-    echo("<li>".$_POST["poscode"]);
+    echo("<li>Imie: ".$_POST["firstname"]);
+    echo("<li>Nazwisko: ".$_POST["lastname"]);
+    echo("<li>Miasto: ".$_POST["city"]);
+    echo("<li>Telefon: ".$_POST["phone"]);
+    echo("<li>Kod Pocztowy: ".$_POST["poscode"]);
 		
 	echo("<ul>");
 ?>
