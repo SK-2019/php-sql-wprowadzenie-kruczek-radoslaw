@@ -1,7 +1,13 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+</html>
+
 <?php
 
 
-	echo("jesteś na stronie.php");
+	echo("<h1>jesteś na stronie.php</h1>");
 	
 	echo("<ul>");
 	
