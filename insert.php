@@ -7,7 +7,7 @@ echo "<li>". $_POST['data_urodzenia'];
 
 
 require_once("connect.php");
-$sql = "INSERT INTO Pracownicy (null, name, dzial,zarobki,data_urodzenia)
+$sql = "INSERT INTO pracownicy (null, name, dzial,zarobki,data_urodzenia)
 	      VALUES (
 					null,". 
 					$_POST['name'], 
