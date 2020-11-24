@@ -74,9 +74,8 @@ li {
 
 
 
-form {
-  justify-content: center;
+br {
   
-
-
+    justify-content: center;
+    display: flex;
 }
