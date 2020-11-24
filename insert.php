@@ -7,8 +7,8 @@ echo "<li>data urodzenia: ". $_POST['data_urodzenia'];
 
 
 require_once("connect.php");
-$sql = "INSERT INTO pracownicy (id_pracownicy, imie, dzial, zarobki, data_urodzenia) 
-       VALUES (null,'". $_POST['name']."', 4, 86,'1999-05-21')";
+$sql = "INSERT INTO pracownicy (id_pracownicy,imie, dzial, zarobki, data_urodzenia) 
+        VALUES (null,'".$_POST['name']."', ".$_POST['dzial'].", ".$_POST['zarobki'].",'".$_POST['data_urodzenia']."')";
 
 //obsługa błędów zapisu do bazy
 if ($conn->query($sql) === TRUE) {
