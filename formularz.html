@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Dane do Bazy</title>
+  <title>Prosty Formuarz</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<form action="insert.php" method="POST">
-	    <input type="text" name="name"></br>
-			<input type="number" name="dzial"></br>
-			<input type="number" name="zarobki"></br>
-			<input type="date" name="data_urodzenia"></br>
-			<input type="submit" value="dodaj pracownika"></br>
-	</form>
+    <form action="strona.php" method="POST">
+      <input type="text" name="firstname"></br>
+      <input type="text" name="lastname"></br>
+      <input type="text" name="city"></br>
+      <input type="text" name="phone"></br>
+      <input type="text" name="poscode"></br>
+      <input type="submit" value="wyślij do strona.php">
+    </form>
 </body>
 </html>
