@@ -74,8 +74,9 @@ li {
 
 
 
-br {
+form {
+  text-align: center;
   
-    justify-content: center;
-    display: flex;
+
+
 }
