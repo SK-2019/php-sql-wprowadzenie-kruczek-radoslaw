@@ -1,3 +1,21 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+</body>
+</html>
+<div class="nav">
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+    <a href="daneDoBazy.php">Dane do Bazy</a>
+    <a href="index.php">strona główna</a>
+    
+</div>
+
+
+
+
 <?php
 echo("jestes w insert.php </br>");
 echo "<li>Imie: ". $_POST['name'];
