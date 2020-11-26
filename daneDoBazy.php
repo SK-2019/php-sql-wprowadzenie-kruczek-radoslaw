@@ -22,6 +22,10 @@
 	</form>
 </body>
 </html>
+<div class="nav">
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+    <a href="index.php">strona główna</a>
+</div>
 <?php
 
 
