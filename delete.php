@@ -30,7 +30,7 @@ $sql = "DELETE  FROM pracownicy WHERE id_pracownicy= '".$_POST['id']."';";
 echo $sql;
 
 if ($conn->query($sql) === TRUE) {
-  echo ("<h2>New record created successfully</h2>");
+  echo ("<h2>Record deleted successfully</h2>");
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
