@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="nav">
+    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+    <a href="index.php">strona główna</a>
+</div>
 	<h3>dodawanie pracownika</h3>
 	<form action="insert.php" method="POST">
 	    <input type="text" name="name" placeholder="name"></br>
@@ -22,10 +26,7 @@
 	</form>
 </body>
 </html>
-<div class="nav">
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
-    <a href="index.php">strona główna</a>
-</div>
+
 <?php
 
 
