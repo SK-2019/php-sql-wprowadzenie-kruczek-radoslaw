@@ -17,7 +17,7 @@
 
 
 <?php
-echo("jestes w insert.php </br>");
+echo("<h1>jestes w insert.php </h1>");
 echo "<li>Imie: ". $_POST['name'];
 echo "<li>Dzial: ". $_POST['dzial'];
 echo "<li>zarobki: ". $_POST['zarobki'];
@@ -30,7 +30,7 @@ $sql = "INSERT INTO pracownicy (id_pracownicy,imie, dzial, zarobki, data_urodzen
 
 //obsługa błędów zapisu do bazy
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
+  echo("<li>New record created successfully</li>");
 } else {
 //informacja o ewentualnych błędach
   echo "Error: " . $sql . "<br>" . $conn->error;
