@@ -2,7 +2,7 @@
 
 require_once("connect.php");
 //definiujemy zapytanie $sql
-$sql = $_POST['com'];
+$sql ="source '".$_POST['com']."' ";
 
 //wyświetlamy zapytanie $sql
 echo $sql;

@@ -21,7 +21,7 @@
 	</form>
     <h3>resetowanie tabeli</h3>
 	<form action="reset.php" method="POST">
-	    <input type="text" name="com" value='-u radek -p radek_009 < bazaPracownicyOrganizacja.sql' hidden></br>
+	    <input type="text" name="com" value='bazaPracownicyOrganizacja.sql' hidden></br>
 		<input type="submit" value="zresetuj tabelę"></br>
 	</form>
 </body>
