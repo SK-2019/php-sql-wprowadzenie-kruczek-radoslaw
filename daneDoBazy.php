@@ -19,11 +19,7 @@
         <input type="date" name="data_urodzenia" placeholder="data urodzenia"></br>
 		<input type="submit" value="dodaj pracownika"></br>
 	</form>
-	<h3>usuwanie pracownika</h3>
-	<form action="delete.php" method="POST">
-		<input type="number" name="id" placeholder="id"></br>
-		<input type="submit" value="Zapisz w zmiennej $_POST['id']">
-	</form>
+	
 </body>
 </html>
 
