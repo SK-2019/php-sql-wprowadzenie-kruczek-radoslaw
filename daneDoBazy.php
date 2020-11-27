@@ -48,8 +48,7 @@ echo("<th>data_urodzenia</th>");
 			<input type='number' name='id' value='3' placeholder='id'></br>
 			<input type='submit' value='usuń pracownika'>
 		</form>
-	."</td>
-	<td>".$wiersz['data_urodzenia']."</td>");
+	."</td>");
         echo("</tr>");
     }
 echo("</table>");
