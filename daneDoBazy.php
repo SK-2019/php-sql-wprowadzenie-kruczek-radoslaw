@@ -42,15 +42,21 @@ echo("<th>data_urodzenia</th>");
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td>
-	<td>".
+          echo("<td>".$wiersz["id_pracownicy"]."</td><td>".$wiersz["imie"]."</td><td>".$wiersz["zarobki"]."</td><td>".$wiersz["data_urodzenia"]."</td><td>".$wiersz["data_urodzenia"]."</td>
+		
+		<td>
+		
+		asd
 		<form action='delete.php' method='POST'>
-			<input type='number' name='id' value='3' placeholder='id'></br>
-			<input type='submit' value='usuń pracownika'>
+   			<input type='number' name='id' value='".$row['id_pracownicy']."'></br>
+   			<input type='submit' value='Usuń pracownika'>
 		</form>
-	."</td>");
-        echo("</tr>");
-    }
+		
+		</td>
+		
+		");
+            echo("</tr>");
+        }
 echo("</table>");
 ?>
 
