@@ -46,7 +46,7 @@ echo("<th>data_urodzenia</th>");
 	<td>".
 		<form action='delete.php' method='POST'>
 			<input type='number' name='id' value='3' placeholder='id'></br>
-			<input type='submit' value='Zapisz w zmiennej $_POST['id']'>
+			<input type='submit' value='usuń pracownika'>
 		</form>
 	."</td>
 	<td>".$wiersz['data_urodzenia']."</td>");
