@@ -2,7 +2,7 @@
 
 require_once("connect.php");
 
-system('mysql --user=radek --password=Radek2003! Radek_009< D:\Pobrane\bazaPracownicyOrganizacja.sql');
+system('mysql --user=radek --password=Radek2003! radek_009 < D:\Pobrane\bazaPracownicyOrganizacja.sql');
 
 
 //definiujemy zapytanie $sql
