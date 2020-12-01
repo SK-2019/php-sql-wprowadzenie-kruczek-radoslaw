@@ -2,7 +2,7 @@
 
 require_once("connect.php");
 
-system('mysql --user=radek --password=Radek2003! radek_009 < D:\Pobrane\bazaPracownicyOrganizacja.sql');
+system('mysql --user=radek --password=Radek2003! radek_009 < Pobrane\bazaPracownicyOrganizacja.sql');
 
 
 //definiujemy zapytanie $sql
@@ -12,11 +12,11 @@ system('mysql --user=radek --password=Radek2003! radek_009 < D:\Pobrane\bazaPrac
 //echo $sql;
 
 //if ($conn->query($sql) === TRUE) {
-  echo ("<h2>Record deleted successfully</h2>");
+  //echo ("<h2>Record deleted successfully</h2>");
   
 } //else {
   //echo "Error: " . $sql . "<br>" . $conn->error;
 }
 header('Location: daneDoBazy.php');
-$conn->close();
+//$conn->close();
 ?>
