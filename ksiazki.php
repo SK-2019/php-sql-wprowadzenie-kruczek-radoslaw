@@ -51,11 +51,12 @@ echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
 echo("<th>id</th>");
-echo("<th>autor</th>");
+echo("<th>biblAutor_id</th>");
+echo("<th>biblTytul_id</th>");
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['id']."</td><td>".$wiersz['biblAutor_id']."</td><td>".$wiersz['bibltytul_id']."</td>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['biblAutor_id']."</td><td>".$wiersz['biblTytul_id']."</td>");
         echo("</tr>");
     }
 echo("</table>");
