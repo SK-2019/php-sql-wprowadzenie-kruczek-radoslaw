@@ -25,7 +25,7 @@ $result=$conn->query($sql);
 
         while($wiersz=$result->fetch_assoc()) {
                
-                    echo("<br><option value=".$wiersz['id'].">".$wiersz["autor"]."</option>");}
+                    echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."<br></option>");}
                     //echo("<input type='Submit' value='Submit'><br>");
                
             
@@ -46,7 +46,7 @@ $result=$conn->query($sql);
 
         while($wiersz=$result->fetch_assoc()) {
                
-                    echo("<br><option value=".$wiersz['id'].">".$wiersz["tytul"]."</option>");}
+                    echo("<option value=".$wiersz['id'].">".$wiersz["tytul"]."<br></option>");}
                     echo("<input type='Submit' value='Submit'><br>");
                
             
