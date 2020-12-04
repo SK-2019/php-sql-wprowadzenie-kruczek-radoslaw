@@ -13,20 +13,20 @@
 
 <?php
 require_once("connect.php");
+$sql = 'SELECT * FROM biblAutor';
+echo("<li>".$sql);
+$result = $conn->query($sql);
 
-$sql = ("SELECT * from biblTytul");
-echo("<h2>".$sql."</h2>");
 
-$result=$conn->query($sql);
-        echo("<select name='tytul' id='tytul'>");
+echo("<form action='action.php'>");
 
-        while($row=$result->fetch_assoc()) {
-               
-                    echo("<option value=".$wiersz['tytul'].">".$wiersz["tytul"]."</option>");}
-                    echo("<input type='Submit' value='Sumbit'><br>");
-               
-            
-        echo("</select>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<option value='".$wiersz['id']"'>id</option>""<option value='".$wiersz['autor']"'>autor</option>");
+        echo("</tr>");
+    }
+echo("</table>");
 
 
 
@@ -34,19 +34,20 @@ $result=$conn->query($sql);
 </body>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM biblTytul';
-echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>id</th>");
-echo("<th>autor</th>");
 
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['id']."</td><td>".$wiersz['tytul']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
+$sql = ("SELECT * from biblTytul");
+echo("<h2>".$sql."</h2>");
+
+$result=$conn->query($sql);
+        echo("<select name='tytul' id='tytul'>");
+
+        while($wiersz=$result->fetch_assoc()) {
+               
+                    echo("<option value=".$wiersz['tytul'].">".$wiersz["tytul"]."</option>");}
+                    echo("<input type='Submit' value='Sumbit'><br>");
+               
+            
+        echo("</select>");
 ?>
 <?php
 require_once("connect.php");
