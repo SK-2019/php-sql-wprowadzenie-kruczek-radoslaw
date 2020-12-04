@@ -8,3 +8,4 @@
 
 echo("<li>autor: ".$_POST['autor']);
 echo("<li>tytuł: ".$_POST['tytul']);
+?>
