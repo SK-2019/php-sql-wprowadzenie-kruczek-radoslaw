@@ -15,7 +15,7 @@
 require_once("connect.php");
 
 $sql = ("SELECT * from biblAutor");
-echo("<li>".$sql.);
+echo("<li>".$sql);
 
 $result=$conn->query($sql);
         echo("<select name='tytul' id='tytul'>");
@@ -43,7 +43,7 @@ $result=$conn->query($sql);
 
         while($wiersz=$result->fetch_assoc()) {
                
-                    echo("<option value=".$wiersz['tytul'].">".$wiersz["tytul"]."</option>");}
+                    echo("<option value=".$wiersz['id'].">".$wiersz["tytul"]."</option>");}
                     echo("<input type='Submit' value='Sumbit'><br>");
                
             
