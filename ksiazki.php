@@ -54,7 +54,7 @@ $result=$conn->query($sql);
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM biblAutor_biblTytul';
+$sql = 'SELECT * FROM biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id = id and biblTytul_id = id';
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
