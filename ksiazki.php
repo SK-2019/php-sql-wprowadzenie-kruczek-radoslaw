@@ -13,20 +13,20 @@
 
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM biblAutor';
-echo("<li>".$sql);
-$result = $conn->query($sql);
 
+$sql = ("SELECT * from biblAutor");
+echo("<li>".$sql.);
 
-echo("<form action='action.php'>");
+$result=$conn->query($sql);
+        echo("<select name='tytul' id='tytul'>");
 
-
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<option value='".$wiersz['id']"'>id</option>""<option value='".$wiersz['autor']"'>autor</option>");
-        echo("</tr>");
-    }
-echo("</table>");
+        while($wiersz=$result->fetch_assoc()) {
+               
+                    echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."</option>");}
+                    echo("<input type='Submit' value='Sumbit'><br>");
+               
+            
+        echo("</select>");
 
 
 
