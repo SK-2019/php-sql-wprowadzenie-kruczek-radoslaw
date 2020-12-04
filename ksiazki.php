@@ -10,8 +10,10 @@
     <a href="index.php">strona główna</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 </div>
-
+<form action='action_page.php'>
 <?php
+
+
 require_once("connect.php");
 
 $sql = ("SELECT * from biblAutor");
@@ -23,7 +25,7 @@ $result=$conn->query($sql);
         while($wiersz=$result->fetch_assoc()) {
                
                     echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."</option>");}
-                    echo("<input type='Submit' value='Sumbit'><br>");
+                    //echo("<input type='Submit' value='Submit'><br>");
                
             
         echo("</select>");
@@ -44,7 +46,7 @@ $result=$conn->query($sql);
         while($wiersz=$result->fetch_assoc()) {
                
                     echo("<option value=".$wiersz['id'].">".$wiersz["tytul"]."</option>");}
-                    echo("<input type='Submit' value='Sumbit'><br>");
+                    echo("<input type='Submit' value='Submit'><br>");
                
             
         echo("</select>");
@@ -66,3 +68,4 @@ echo("<th>biblTytul_id</th>");
     }
 echo("</table>");
 ?>
+</form>
