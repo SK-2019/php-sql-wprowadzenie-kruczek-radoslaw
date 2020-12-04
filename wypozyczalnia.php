@@ -7,4 +7,4 @@
 <?php
 
 echo("<li>autor: ".$_POST['autor']);
-echo("<li>autor: ".$_POST['tytul']);
+echo("<li>tytuł: ".$_POST['tytul']);
