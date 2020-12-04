@@ -17,7 +17,7 @@
 require_once("connect.php");
 
 $sql = ("SELECT * from biblAutor");
-echo("<li>".$sql."</li>");
+
 
 $result=$conn->query($sql);
         echo("<select name='autor' id='autor'>");
@@ -38,7 +38,7 @@ $result=$conn->query($sql);
 require_once("connect.php");
 
 $sql = ("SELECT * from biblTytul");
-echo("<li>".$sql."</li>");
+
 
 $result=$conn->query($sql);
         echo("<select name='tytul' id='tytul'>");
