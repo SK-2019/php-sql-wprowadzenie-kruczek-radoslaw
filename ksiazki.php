@@ -10,7 +10,7 @@
     <a href="index.php">strona główna</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 </div>
-<form action='wypozyczalnia.php'>
+<form action='wypozyczalnia.php' method='POST'>
 <?php
 
 
