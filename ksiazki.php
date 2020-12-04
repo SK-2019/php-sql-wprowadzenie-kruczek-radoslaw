@@ -10,7 +10,7 @@
     <a href="index.php">strona główna</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 </div>
-<form action='action_page.php'>
+<form action='wypozyczalnia.php'>
 <?php
 
 
@@ -20,7 +20,7 @@ $sql = ("SELECT * from biblAutor");
 echo("<li>".$sql."</li>");
 
 $result=$conn->query($sql);
-        echo("<select name='tytul' id='tytul'>");
+        echo("<select name='autor' id='autor'>");
 
         while($wiersz=$result->fetch_assoc()) {
                
