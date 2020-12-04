@@ -10,6 +10,7 @@
     <a href="index.php">strona główna</a>
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 </div>
+<h1>Radosław Kruczek</h1>
 <form action='wypozyczalnia.php' method='POST'>
 <?php
 
