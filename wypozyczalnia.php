@@ -19,6 +19,6 @@ $result=$conn->query($sql);
 
 $conn->close();
 
-header('Location: ksiazki.php');
+//header('Location: ksiazki.php');
 
 ?>
