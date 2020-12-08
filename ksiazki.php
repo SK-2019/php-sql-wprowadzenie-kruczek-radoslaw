@@ -25,7 +25,7 @@ $result=$conn->query($sql);
 
         while($wiersz=$result->fetch_assoc()) {
                
-                    echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."</option>");
+                    echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."</option>")};
                     //echo("<input type='Submit' value='Submit'><br>");
                
             
@@ -34,7 +34,7 @@ $result=$conn->query($sql);
 
 
 ?>
-</body>
+
 <?php
 require_once("connect.php");
 
