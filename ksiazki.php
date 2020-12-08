@@ -25,7 +25,7 @@ $result=$conn->query($sql);
 
         while($wiersz=$result->fetch_assoc()) {
                
-                    echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."</option>");}
+                    echo("<option value=".$wiersz['id'].">".$wiersz["autor"]."</option>");
                     //echo("<input type='Submit' value='Submit'><br>");
                
             
@@ -52,6 +52,7 @@ $result=$conn->query($sql);
             
         echo("</select>");
 ?>
+</form>
 <?php
 require_once("connect.php");
 $sql = ("SELECT * from biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id=autor_id and biblTytul_id=tytul_id");
@@ -67,8 +68,8 @@ while($row=$result->fetch_assoc()) {
     echo("<tr>");
         echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td><td>".$row["tytul"]."</td>");
     echo("</tr>");
-    }
+}
+
 echo("</table>");
 
 ?>
-</form>
