@@ -54,19 +54,21 @@ $result=$conn->query($sql);
 ?>
 <?php
 require_once("connect.php");
-$sql = 'SELECT * FROM biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id = autor_id and biblTytul_id = tytul_id';
+$sql = ("SELECT * from biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id=autor_id and biblTytul_id=tytul_id");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
 echo("<th>id</th>");
-echo("<th>biblAutor_id</th>");
-echo("<th>biblTytul_id</th>");
+echo("<th>autor</th>");
+echo("<th>tytul</th>");
 
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['id']."</td><td>".$wiersz['biblAutor_id']."</td><td>".$wiersz['biblTytul_id']."</td>");
-        echo("</tr>");
+            
+while($row=$result->fetch_assoc()) {
+    echo("<tr>");
+        echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td><td>".$row["tytul"]."</td>");
+    echo("</tr>");
     }
 echo("</table>");
+
 ?>
 </form>
