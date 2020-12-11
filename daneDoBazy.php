@@ -21,11 +21,7 @@
         <input type="date" name="data_urodzenia" placeholder="data urodzenia"></br>
 		<input type="submit" value="dodaj pracownika"></br>
 	</form>
-    <h3>resetowanie tabeli</h3>
-	<form action="reset.php" method="POST">
-	    <input type="text" name="com" value='bazaPracownicyOrganizacja.sql' hidden></br>
-		<input type="submit" value="zresetuj tabelę"></br>
-	</form>
+    
 </body>
 </html>
 
