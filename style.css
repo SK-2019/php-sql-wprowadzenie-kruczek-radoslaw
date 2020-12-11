@@ -1,96 +1,114 @@
 body {
-    background-color: lightblue;
-  }
-  
+  background-color: lightblue;
+}
+
 h1 {
-    display: flex;
-    justify-content: center;
-    color: rgb(55, 51, 82);
-    text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
-    
+  display: flex;
+  justify-content: center;
+  color: rgb(55, 51, 82);
+  text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
+  
 }
 
 h2 {
-  display: flex;
-  justify-content: center;
-  text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
+display: flex;
+justify-content: center;
+text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
 }
 
 h3 {
-  display: flex;
-  justify-content: center;
-  text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
+display: flex;
+justify-content: center;
+text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
 }
 
 table{
-    border-collapse: collapse;
-    justify-content: center;
-    display: flex;
+  border-collapse: collapse;
+  justify-content: center;
+  display: flex;
 }
 
 table, th, td {
-    
-    border-collapse: collapse;
+  
+  border-collapse: collapse;
 }
 
 th, td{
-    padding: 15px;
-    text-align: center;
-    font-size: 1.875em;
-    border: 1px solid black;
+  padding: 15px;
+  text-align: center;
+  font-size: 1.875em;
+  border: 1px solid black;
 }
 
 tr {
-  background-color: bisque;
-  color: black;
+background-color: bisque;
+color: black;
 }
 
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 th {
-  background-color: #5da85f;
-  color: white;
+background-color: #5da85f;
+color: white;
 }
 
 a {
-  
+
   text-align: center;
   text-decoration: none;
   background-color: red;
-  padding: 1rem;
+  margin: 5px 10px;
   color: black;
   font-size: 1.25em;
 }
 
 a:hover {
-  background-color: chartreuse;
+background-color: chartreuse;
 }
 
 li {
-    text-align: center;
-    font-size: 1.5em;
-    text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
+  text-align: center;
+  font-size: 1.5em;
+  text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
 }
 
 
 
 form {
-  text-align: center;
-  
+text-align: center;
+
 
 
 }
 
-select {
-
+.title {
+  display: flex;
   justify-content: center;
-  display: flex; 
-  
-
+  color: rgb(55, 51, 82);
+  text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
 }
 
-option {
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  text-align: center;
+.item {
+  width: 200px;
+  height: 100px;
+  margin: 10px;
+}
 
+.colorRed {
+  width: 100%;
+}
+
+.colorBlue {
+  width: 20%;
+  flex-direction: column;
+  display: flex;
+}
+
+.colorGreen {
+  width: 70%;
 }
