@@ -8,9 +8,11 @@
     <h1 class="title">Radosław Kruczek</h1>
 </div>
     <div class="item colorBlue">
-        <a href="pracownicy.php">pracownicy</a>
+        <a href="orgPracownicy.php">Organizacja i Pracownicy</a>
         <a href="agregat.php">Funkcje Agregujące</a>
-        <a href="orgPracownicy.php">Prac i Org</a>
+        <a href="pracownicy.php">pracownicy</a>
+        <a href="daneDoBazy.php">Dane do Bazy</a>
+        <a href="ksiazki.php">Książki</a>
         <a href="index.php">strona główna</a>
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
