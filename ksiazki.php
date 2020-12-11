@@ -2,15 +2,18 @@
     <head>
         <link rel="stylesheet" href="style.css">
     </head>
-
-<div class="nav">
-    <a href="pracownicy.php">pracownicy</a>
-    <a href="agregat.php">Funkcje Agregujące</a>
-    <a href="Data_i_Czas.php">Data_i_czas</a>
-    <a href="index.php">strona główna</a>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
-</div>
-<h1>Radosław Kruczek</h1>
+<div class="container">
+    <div class="item colorRed">
+        <h1 class="title">Radosław Kruczek</h1>
+    </div>
+    <div class="item colorBlue">
+        <a href="pracownicy.php">pracownicy</a>
+        <a href="agregat.php">Funkcje Agregujące</a>
+        <a href="Data_i_Czas.php">Data_i_czas</a>
+        <a href="index.php">strona główna</a>
+        <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+    </div>
+    <div class="item colorGreen">
 <form action='wypozyczalnia.php' method='POST'>
 <?php
 
@@ -78,3 +81,5 @@ while($row=$result->fetch_assoc()) {
 echo("</table>");
 
 ?>
+    </div>
+</div>
