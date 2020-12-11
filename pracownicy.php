@@ -3,16 +3,21 @@
         <link rel="stylesheet" href="style.css">
     </head>
 </html>
-<div class="nav">
-    <a href="orgPracownicy.php">Org i Prac</a>
-    <a href="agregat.php">Funkcje Agregujące</a>
-    <a href="Data_i_Czas.php">Data_i_czas</a>
-    <a href="index.php">strona główna</a>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
-   
-</div>
+<div class="container">
+    <div class="item colorRed">
+        <h1 class="title">Radosław Kruczek</h1>
+    </div>
+    <div class="item colorblue">
+        <a href="orgPracownicy.php">Org i Prac</a>
+        <a href="agregat.php">Funkcje Agregujące</a>
+        <a href="Data_i_Czas.php">Data_i_czas</a>
+        <a href="index.php">strona główna</a>
+        <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+    </div>
+    <div class="item colorGreen">
+        
+
 <?php
-    echo("<h1>Radosław Kruczek</h1>");
     require_once("connect.php");
     $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial = 2';
     echo("<h2>Zadanie 1</h2>");
@@ -70,3 +75,5 @@
     }
     echo("</table>");
 ?>
+    </div>
+</div>
