@@ -3,14 +3,18 @@
         <link rel="stylesheet" href="style.css">
     </head>
 </html>
-<div class="nav">
-    <a href="pracownicy.php">pracownicy</a>
-    <a href="agregat.php">Funkcje Agregujące</a>
-    <a href="orgPracownicy.php">Prac i Org</a>
-    <a href="index.php">strona główna</a>
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+<div class="container">
+<div class="item colorRed">
+    <h1 class="title">Radosław Kruczek</h1>
 </div>
-
+    <div class="item colorBlue">
+        <a href="pracownicy.php">pracownicy</a>
+        <a href="agregat.php">Funkcje Agregujące</a>
+        <a href="orgPracownicy.php">Prac i Org</a>
+        <a href="index.php">strona główna</a>
+        <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+    </div>
+    <div class="item colorGreen">
 
 <?php
 require_once("connect.php");
@@ -431,3 +435,5 @@ echo("<th>ilość osób</th>");
     }
 echo("</table>");
 ?>
+    </div>
+</div>
