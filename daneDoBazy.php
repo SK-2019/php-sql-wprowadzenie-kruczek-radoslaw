@@ -7,10 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="nav">
-    <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
-    <a href="index.php">strona główna</a>
-</div>
+<div class="container">
+	<div class="item colorBlue">
+		<a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+		<a href="index.php">strona główna</a>
+	</div>
+	<div class="item colorGreen">
 	<h3>dodawanie pracownika</h3>
 	<form action="insert.php" method="POST">
 	    <input type="text" name="name" placeholder="name"></br>
@@ -60,3 +62,5 @@ echo("<th>data_urodzenia</th>");
 echo("</table>");
 
 ?>
+	</div>
+</div>
