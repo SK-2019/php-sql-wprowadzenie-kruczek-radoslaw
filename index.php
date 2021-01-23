@@ -11,6 +11,7 @@
     <div class="container">
       <div class="item colorRed">
         <h1 class="title">Radosław Kruczek</h1>
+        <h1 class="title">Radosław Kruczek</h1>
       </div>
       <div class="item colorBlue">
         <a href="orgPracownicy.php">Organizacja i Pracownicy</a>
