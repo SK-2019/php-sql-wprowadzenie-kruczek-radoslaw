@@ -20,7 +20,7 @@ $result=$conn->query($sql);
 //obsługa błędów zapisu do bazy
 if ($conn->query($sql) === TRUE) {
     echo("<li>New record created successfully</li>");
-    header('Location: Biblioteka\ksiazki.php');
+    header('Location: ksiazki.php');
   } else {
   //informacja o ewentualnych błędach
     echo "Error: " . $sql . "<br>" . $conn->error;

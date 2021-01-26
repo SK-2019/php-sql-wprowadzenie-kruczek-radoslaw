@@ -31,7 +31,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo ("<h2>Record deleted successfully</h2>");
-  header('Location: Biblioteka\ksiazki.php');
+  header('Location: ksiazki.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

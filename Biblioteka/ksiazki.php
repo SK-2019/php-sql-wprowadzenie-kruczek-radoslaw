@@ -7,12 +7,12 @@
         <h1 class="title">Radosław Kruczek</h1>
     </div>
     <div class="item colorBlue">
-        <a href="orgPracownicy.php">Organizacja i Pracownicy</a>
-        <a href="agregat.php">Funkcje Agregujące</a>
-        <a href="pracownicy.php">pracownicy</a>
-        <a href="Data_i_Czas.php">Data i czas</a>
-        <a href="daneDoBazy.php">Dane do Bazy</a>
-        <a href="index.php">strona główna</a>
+        <a href="../Pracownicy\orgPracownicy.php">Organizacja i Pracownicy</a>
+        <a href="../Pracownicy\agregat.php">Funkcje Agregujące</a>
+        <a href="../Pracownicy\pracownicy.php">pracownicy</a>
+        <a href="../Pracownicy\Data_i_Czas.php">Data i czas</a>
+        <a href="../Dane-do-bazy\daneDoBazy.php">Dane do Bazy</a>
+        <a href="../index.php">strona główna</a>
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
     <div class="item colorGreen">
@@ -73,7 +73,7 @@ while($row=$result->fetch_assoc()) {
     echo("<tr>");
         echo("<td>".$row["id"]."</td><td>".$row["autor"]."</td><td>".$row["tytul"]."</td>
         <td>
-        <form action='Biblioteka\delete_bibl.php' method='POST'>
+        <form action='delete_bibl.php' method='POST'>
         <input type='number' name='id' value='".$row['id']."' hidden></br>
         <input type='submit' value='Usuń'>
         </form></td>");
