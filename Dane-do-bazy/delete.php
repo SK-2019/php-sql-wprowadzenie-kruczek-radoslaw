@@ -8,8 +8,8 @@
 </html>
 <div class="nav">
     <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
-    <a href="daneDoBazy.php">Dane do Bazy</a>
-    <a href="index.php">strona główna</a>
+    <a href="Dane-do-bazy\daneDoBazy.php">Dane do Bazy</a>
+    <a href="../index.php">strona główna</a>
     
 </div>
 
@@ -22,7 +22,7 @@ echo "<li>".$_POST['id'];
 
 
 
-require_once("connect.php");
+require_once("../connect.php");
 //definiujemy zapytanie $sql
 $sql = "DELETE  FROM pracownicy WHERE id_pracownicy= '".$_POST['id']."';";
 
@@ -31,7 +31,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo ("<h2>Record deleted successfully</h2>");
-  header('Location: daneDoBazy.php');
+  header('Location: Dane-do-bazy\daneDoBazy.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

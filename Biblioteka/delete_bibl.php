@@ -22,7 +22,7 @@ echo "<li>".$_POST['id'];
 
 
 
-require_once("connect.php");
+require_once("../connect.php");
 //definiujemy zapytanie $sql
 $sql = "DELETE  FROM biblAutor_biblTytul WHERE id= '".$_POST['id']."';";
 
@@ -31,7 +31,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo ("<h2>Record deleted successfully</h2>");
-  header('Location: ksiazki.php');
+  header('Location: Biblioteka\ksiazki.php');
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }

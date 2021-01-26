@@ -9,17 +9,17 @@
 <body>
 <div class="container">
 	<div class="item colorBlue">
-		<a href="orgPracownicy.php">Organizacja i Pracownicy</a>
-        <a href="agregat.php">Funkcje Agregujące</a>
-        <a href="pracownicy.php">pracownicy</a>
-        <a href="Data_i_Czas.php">Data i czas</a>
-        <a href="ksiazki.php">Książki</a>
-        <a href="index.php">strona główna</a>
+		<a href="Pracownicy\orgPracownicy.php">Organizacja i Pracownicy</a>
+        <a href="Pracownicy\agregat.php">Funkcje Agregujące</a>
+        <a href="Pracownicy\pracownicy.php">pracownicy</a>
+        <a href="Pracownicy\Data_i_Czas.php">Data i czas</a>
+        <a href="Biblioteka\ksiazki.php">Książki</a>
+        <a href="../index.php">strona główna</a>
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 	</div>
 	<div class="item colorGreen">
 	<h3>dodawanie pracownika</h3>
-	<form action="insert.php" method="POST">
+	<form action="Dane-do-bazy\insert.php" method="POST">
 	    <input type="text" name="name" placeholder="name"></br>
 		<input type="number" name="dzial" placeholder="dzial"></br>
 	    <input type="number" name="zarobki" placeholder="zarobki"></br>
@@ -50,7 +50,7 @@ echo("<th>data_urodzenia</th>");
 		<td>
 		
 		
-		<form action='delete.php' method='POST'>
+		<form action='Dane-do-bazy\delete.php' method='POST'>
    			<input type='number' name='id' value='".$wiersz['id_pracownicy']."' hidden></br>
    			<input type='submit' value='Usuń'>
 		</form>
