@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Dane do Bazy</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <div class="container">
@@ -33,7 +33,7 @@
 <?php
 
 
-require_once("connect.php");
+require_once("../connect.php");
 $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org';
 $result = $conn->query($sql);
 echo("<table border=0>");

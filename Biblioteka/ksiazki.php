@@ -1,6 +1,6 @@
 <html>
     <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/style.css">
     </head>
 <div class="container">
     <div class="item colorRed">
@@ -16,11 +16,11 @@
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
     <div class="item colorGreen">
-<form action='wypozyczalnia.php' method='POST'>
+<form action='Biblioteka\wypozyczalnia.php' method='POST'>
 <?php
 
 
-require_once("connect.php");
+require_once("../connect.php");
 
 $sql = ("SELECT * from biblAutor");
 
@@ -41,7 +41,7 @@ $result=$conn->query($sql);
 ?>
 
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 
 $sql = ("SELECT * from biblTytul");
 
@@ -59,7 +59,7 @@ $result=$conn->query($sql);
 ?>
 </form>
 <?php
-require_once("connect.php");
+require_once("../connect.php");
 $sql = ("SELECT * from biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id=autor_id and biblTytul_id=tytul_id");
 echo("<li>".$sql);
 $result = $conn->query($sql);

@@ -20,7 +20,7 @@
         
 
 <?php
-    require_once("connect.php");
+    require_once("../connect.php");
     $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial = 2';
     echo("<h2>Zadanie 1</h2>");
     echo("<h3>Pracownicy tylko z działu 2</h3>");
