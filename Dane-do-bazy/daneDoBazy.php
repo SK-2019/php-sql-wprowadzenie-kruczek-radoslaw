@@ -9,11 +9,11 @@
 <body>
 <div class="container">
 	<div class="item colorBlue">
-		<a href="../pracownicy\orgPracownicy.php">Organizacja i Pracownicy</a>
-        <a href="../pracownicy\agregat.php">Funkcje Agregujące</a>
-        <a href="../pracownicy\pracownicy.php">pracownicy</a>
-        <a href="../pracownicy\Data_i_Czas.php">Data i czas</a>
-        <a href="../biblioteka\ksiazki.php">Książki</a>
+		<a href="../Pracownicy\orgPracownicy.php">Organizacja i Pracownicy</a>
+        <a href="../Pracownicy\agregat.php">Funkcje Agregujące</a>
+        <a href="../Pracownicy\pracownicy.php">pracownicy</a>
+        <a href="../Pracownicy\Data_i_Czas.php">Data i czas</a>
+        <a href="../Biblioteka\ksiazki.php">Książki</a>
         <a href="../index.php">strona główna</a>
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
 	</div>

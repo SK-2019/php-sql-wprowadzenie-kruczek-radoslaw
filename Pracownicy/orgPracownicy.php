@@ -11,8 +11,8 @@
         <a href="Data_i_Czas.php">Data i czas</a>
         <a href="agregat.php">Funkcje Agregujące</a>
         <a href="pracownicy.php">pracownicy</a>
-        <a href="../dane-do-bazy\daneDoBazy.php">Dane do Bazy</a>
-        <a href="../biblioteka\ksiazki.php">Książki</a>
+        <a href="../Dane-do-bazy\daneDoBazy.php">Dane do Bazy</a>
+        <a href="../Biblioteka\ksiazki.php">Książki</a>
         <a href="../index.php">strona główna</a>
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
