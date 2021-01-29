@@ -53,7 +53,7 @@ $result=$conn->query($sql);
         while($wiersz=$result->fetch_assoc()) {
                
                     echo("<option value=".$wiersz['tytul_id'].">".$wiersz["tytul"]."</option>");}
-                   echo("<input type='number' name='autor' value='".$_POST['autor']."' hidden></br>")''
+                   echo("<input type='number' name='autor' value='".$_POST['autor']."' hidden></br>");
                     echo("<input type='Submit' value='Submit'><br>");
                
             
