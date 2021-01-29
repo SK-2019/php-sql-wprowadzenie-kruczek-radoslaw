@@ -16,7 +16,7 @@
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
     <div class="item colorGreen">
-
+<form action='Biblioteka\wypozyczalnia.php' method='POST'>
 <?php
 
 
@@ -45,7 +45,7 @@ require_once("../connect.php");
 
 $sql = ("SELECT * from biblTytul");
 
-<form action='Biblioteka\wypozyczalnia.php' method='POST'>
+
 $result=$conn->query($sql);
         echo("<select name='tytul' id='tytul'>");
 
