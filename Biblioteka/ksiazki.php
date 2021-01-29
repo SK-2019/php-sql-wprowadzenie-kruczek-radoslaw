@@ -40,7 +40,7 @@ $result=$conn->query($sql);
 
 ?>
 </form>
-<form action='Biblioteka\wypozyczalnia.php' method='POST'>
+<form action='wypozyczalnia.php' method='POST'>
 <?php
 require_once("../connect.php");
 
