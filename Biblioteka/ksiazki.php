@@ -16,7 +16,7 @@
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
     <div class="item colorGreen">
-<form action='Biblioteka\ksiazki.php' method='POST'>
+<form action='ksiazki.php' method='POST'>
 <?php
 
 
