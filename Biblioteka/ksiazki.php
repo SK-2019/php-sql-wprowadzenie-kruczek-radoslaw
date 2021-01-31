@@ -18,10 +18,10 @@
     <div class="item colorGreen">
 <form action='ksiazki.php' method='POST'>
 <?php
-$autor = $_POST['autor'];
 
-if($autor = 0)
-{
+
+
+
     require_once("../connect.php");
 
     $sql = ("SELECT * from biblAutor");
@@ -37,25 +37,8 @@ if($autor = 0)
                
             
         echo("</select>");
-}
-else
-{
-    require_once("../connect.php");
-
-    $sql = ("SELECT * from biblAutor where autor_id = '".$_POST['autor']"'");
 
 
-    $result=$conn->query($sql);
-        echo("<select name='autor' id='autor'>");
-
-        while($wiersz=$result->fetch_assoc()) {
-               
-                    echo("<option value=".$wiersz['autor_id'].">".$wiersz["autor"]."</option>");}
-                    echo("<input type='Submit' value='Submit'><br>");
-               
-            
-        echo("</select>");
-}
 
 ?>
 </form>
