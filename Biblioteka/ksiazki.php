@@ -18,8 +18,9 @@
     <div class="item colorGreen">
 <form action='ksiazki.php' method='POST'>
 <?php
+$autor = $_POST['autor'];
 
-if($_POST['autor'] == 0)
+if($autor = 0)
 {
     require_once("../connect.php");
 
