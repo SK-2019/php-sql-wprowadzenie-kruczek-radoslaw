@@ -16,7 +16,7 @@
         <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
     </div>
     <div class="item colorGreen">
-<form action='ksiazki.php' method='POST'>
+    <form action='wypozyczalnia.php' method='POST'>
 <?php
 
 
@@ -33,16 +33,15 @@
         while($wiersz=$result->fetch_assoc()) {
                
                     echo("<option value=".$wiersz['autor_id'].">".$wiersz["autor"]."</option>");}
-                    echo("<input type='Submit' value='Submit'><br>");
-               
+                    
             
         echo("</select>");
 
 
 
 ?>
-</form>
-<form action='wypozyczalnia.php' method='POST'>
+
+
 <?php
 require_once("../connect.php");
 
@@ -55,7 +54,7 @@ $result=$conn->query($sql);
         while($wiersz=$result->fetch_assoc()) {
                
                     echo("<option value=".$wiersz['tytul_id'].">".$wiersz["tytul"]."</option>");}
-                   echo("<input type='number' name='autor' value='".$_POST['autor']."' hidden></br>");
+                   //echo("<input type='number' name='autor' value='".$_POST['autor']."' hidden></br>");
                     echo("<input type='Submit' value='Submit'><br>");
                
             
