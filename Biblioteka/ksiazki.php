@@ -45,8 +45,8 @@
 <?php
 require_once("../connect.php");
 
-$sql = ("SELECT * from biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id=autor_id and biblTytul_id=tytul_id and biblAutor_id ='".$_POST['autor']."'");
-
+//$sql = ("SELECT * from biblAutor, biblTytul, biblAutor_biblTytul where biblAutor_id=autor_id and biblTytul_id=tytul_id and biblAutor_id ='".$_POST['autor']."'");
+$sql = ("SELECT * from biblTytul");
 
 $result=$conn->query($sql);
         echo("<select name='tytul' id='tytul'>");
