@@ -67,8 +67,9 @@ a {
   color: rgb(255, 255, 255);
   font-size: 1.25em;
   padding: 1rem;
-
-
+  transition-timing-function: ease-out;
+  transition-duration: 2s;
+  transition: width 2s, height 2s;
 }
 
 a:hover {
