@@ -60,6 +60,7 @@ a {
   margin: 5px 10px;
   color: black;
   font-size: 1.25em;
+  padding: 1rem;
 }
 
 a:hover {
