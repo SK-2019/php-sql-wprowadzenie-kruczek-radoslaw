@@ -125,9 +125,11 @@ text-align: center;
 input {
   border-collapse: collapse;
   padding: 1rem;
+  margin: 5px 10px;
 }
 
 option {
   border-collapse: collapse;
   padding: 1rem;
+  margin: 5px 10px;
 }
