@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>strona główna</title>
     <link rel="stylesheet" href="style.css" />
-    &lt;link rel="shortcut icon" href="favicon.ico"/&gt;
   </head>
   <body>
     <div class="container">
