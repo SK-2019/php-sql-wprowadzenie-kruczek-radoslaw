@@ -121,3 +121,7 @@ text-align: center;
 .colorGreen {
   width: 70%;
 }
+
+input {
+  border-collapse: collapse;
+}
