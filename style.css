@@ -120,6 +120,7 @@ text-align: center;
   height: 100%;
   flex-direction: column;
   display: flex;
+  background-color: lightblue;
 }
 
 .colorGreen {
