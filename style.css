@@ -53,7 +53,7 @@ color: white;
 }
 
 a {
-
+  border-radius: 25px;
   text-align: center;
   text-decoration: none;
   background-color: red;
