@@ -69,7 +69,7 @@ a {
   padding: 1rem;
   position: fixed; 
   overflow: auto;
-  height: 100%;
+  
   
 }
 
@@ -117,6 +117,7 @@ text-align: center;
 
 .colorBlue {
   width: 20%;
+  height: 100%;
   flex-direction: column;
   display: flex;
 }
