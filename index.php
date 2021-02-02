@@ -14,7 +14,7 @@
       </div>
       <div class="item colorBlue">
         <ul>
-        <li><a href="orgPracownicy.php">Organizacja i Pracownicy</a></li>
+        <li><a href="Pracownicy/orgPracownicy.php">Organizacja i Pracownicy</a></li>
         <li><a href="Pracownicy/agregat.php">Funkcje Agregujące</a></li>
         <li><a href="Pracownicy/pracownicy.php">pracownicy</a></li>
         <li><a href="Pracownicy/Data_i_Czas.php">Data i czas</a></li>
