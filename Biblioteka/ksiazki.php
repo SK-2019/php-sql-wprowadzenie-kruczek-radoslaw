@@ -7,13 +7,15 @@
         <h1 class="title">Radosław Kruczek</h1>
     </div>
     <div class="item colorBlue">
-        <a href="../Pracownicy\orgPracownicy.php">Organizacja i Pracownicy</a>
-        <a href="../Pracownicy\agregat.php">Funkcje Agregujące</a>
-        <a href="../Pracownicy\pracownicy.php">pracownicy</a>
-        <a href="../Pracownicy\Data_i_Czas.php">Data i czas</a>
-        <a href="../Dane-do-bazy\daneDoBazy.php">Dane do Bazy</a>
-        <a href="../index.php">strona główna</a>
-        <a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a>
+        <ul>
+        <li><a href="../Pracownicy\orgPracownicy.php">Organizacja i Pracownicy</a></li>
+        <li><a href="../Pracownicy\agregat.php">Funkcje Agregujące</a></li>
+        <li><a href="../Pracownicy\pracownicy.php">pracownicy</a></li>
+        <li><a href="../Pracownicy\Data_i_Czas.php">Data i czas</a></li>
+        <li><a href="../Dane-do-bazy\daneDoBazy.php">Dane do Bazy</a></li>
+        <li><a href="../index.php">strona główna</a></li>
+        <li><a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
+        </ul>
     </div>
     <div class="item colorGreen">
     <form action='wypozyczalnia.php' method='POST'>

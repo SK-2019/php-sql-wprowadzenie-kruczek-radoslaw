@@ -57,6 +57,22 @@ background-color: #5da85f;
 color: white;
 }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
 a {
   border-radius: 25px;
   text-align: center;
@@ -66,7 +82,7 @@ a {
   margin: 5px 10px;
   color: rgb(255, 255, 255);
   font-size: 1.25em;
-  padding: 1rem;
+  
 
 }
 
