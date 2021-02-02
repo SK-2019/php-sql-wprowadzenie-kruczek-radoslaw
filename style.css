@@ -124,8 +124,6 @@ text-align: center;
 
 input {
   border-collapse: collapse;
-  background-color: darkviolet;
-  color: white;
   padding: 1rem;
   margin: 5px 10px;
 }
