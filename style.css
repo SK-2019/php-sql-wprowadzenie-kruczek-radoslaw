@@ -1,5 +1,10 @@
 body {
   background-color: lightblue;
+  background-image: url(https://resi.ze-robot.com/dl/4k/4k-desktop-wallpaper.-2560%C3%971080.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 }
 
 h1 {
