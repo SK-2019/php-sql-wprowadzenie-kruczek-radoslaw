@@ -41,7 +41,7 @@ table, th, td {
 th, td{
   padding: 15px;
   text-align: center;
-  font-size: 1.875em;
+  font-size: 1em;
   border: 1px solid black;
 }
 
@@ -69,6 +69,7 @@ a {
   padding: 1rem;
   position: fixed; 
   overflow: auto;
+  height: 100%;
   
 }
 
