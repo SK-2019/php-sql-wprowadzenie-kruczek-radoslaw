@@ -69,9 +69,7 @@ a {
   padding: 1rem;
   position: fixed; 
   overflow: auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+
 }
 
 a:hover {
