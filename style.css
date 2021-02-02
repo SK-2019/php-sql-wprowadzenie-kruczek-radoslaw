@@ -142,13 +142,13 @@ text-align: center;
 
 input {
   border-collapse: collapse;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 5px 10px;
   border-radius: 5px;
 }
 
 select {
   border-collapse: collapse;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 5px 10px;
 }
