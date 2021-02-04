@@ -6,8 +6,8 @@
 
 <?php
 
-echo("<li>autor: ".$_POST['autor']);
-echo("<li>tytuł: ".$_POST['tytul']);
+//echo("<li>autor: ".$_POST['autor']);
+//echo("<li>tytuł: ".$_POST['tytul']);
 
 
 require_once("../connect.php");
@@ -17,15 +17,16 @@ $sql = "INSERT INTO biblwypoz(id, wypautor_id, wyptytul_id) VALUES(null,'".$_POS
 
 $result=$conn->query($sql);
 
-//obsługa błędów zapisu do bazy
+header('Location: ksiazki.php');
+/*obsługa błędów zapisu do bazy
 if ($conn->query($sql) === TRUE) {
     echo("<li>New record created successfully</li>");
-    header('Location: ksiazki.php');
+    
   } else {
   //informacja o ewentualnych błędach
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
   
-
+*/
 
 ?>
