@@ -48,7 +48,7 @@
 
 <?php
 require_once("../connect.php");
-$sql = ("SELECT * from biblAutor, biblTytul, biblwypoz where wypautor_id=autor and wyptytul_id=tytul");
+$sql = ("SELECT * from biblAutor, biblTytul, biblwypoz where wypautor_id=autor_id and wyptytul_id=tytul_id");
 echo("<li>".$sql);
 $result = $conn->query($sql);
 echo("<table border=0>");
