@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/style.css">
+        <title>Biblioteka</title>
     </head>
 <div class="container">
     <div class="item colorRed">

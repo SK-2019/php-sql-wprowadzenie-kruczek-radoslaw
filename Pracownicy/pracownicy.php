@@ -1,6 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="/style.css">
+        <title>Pracownicy</title>
     </head>
 </html>
 <div class="container">
