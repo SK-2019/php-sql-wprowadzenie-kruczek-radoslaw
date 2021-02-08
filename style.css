@@ -67,7 +67,7 @@ color: white;
   overflow: auto;
 }
 
-li a {
+.nav_item {
 
   text-decoration: none;
 }
@@ -75,7 +75,7 @@ li a {
 a {
   border-radius: 25px;
   text-align: center;
-  text-decoration: none;
+  
   background-color: rgb(47, 10, 151);
   background-image: linear-gradient(darkblue, darkred);
   margin: 5px 10px;
