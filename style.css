@@ -57,7 +57,7 @@ background-color: #5da85f;
 color: white;
 }
 
-.nav {
+ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -67,7 +67,7 @@ color: white;
   overflow: auto;
 }
 
-.nav_item {
+li a {
   display: block;
   padding: 1rem;
   text-decoration: none;
