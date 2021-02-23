@@ -22,6 +22,10 @@
     <div class="item colorGreen">
 
 <?php
+echo("<li>".$_SERVER['MYSQL_SERV']);
+echo("<li>".$_SERVER['MYSQL_NAME']);
+echo("<li>".$_SERVER['MYSQL_PS']);
+echo("<li>".$_SERVER['MYSQL_DB']);
 require_once("../connect.php");
 $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 1</h2>");
