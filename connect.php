@@ -1,4 +1,4 @@
 <?php
 //require_once("config.php");
-$conn = new mysqli($_SERVER['SERV'],$_SERVER['PROFIL'], $_SERVER['PSW'], $_SERVER['BD']);
+$conn = new mysqli($_SERVER['MYSQL_SERV'],$_SERVER['MYSQL_NAME'], $_SERVER['MYSQL_PS'], $_SERVER['MYSQL_DB']);
 ?>
