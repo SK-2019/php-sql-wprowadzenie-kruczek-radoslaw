@@ -1,3 +1,3 @@
 <?php
-$conn = new mysqli('mysql-radek.alwaysdata.net', 'radek', 'Radek2003!', 'radek_009');
+$conn = new mysqli($_SERVER['SERV'],$_SERVER['PROFIL'], $_SERVER['PASS'], $_SERVER['BD']);
 ?>
