@@ -38,9 +38,7 @@ echo("<th>wiek</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 1';
 echo("<h2>Zadanie 2</h2>");
 echo("<h3>wiek poszczególnych pracowników z działu serwis</h3>");
@@ -56,9 +54,7 @@ echo("<th>wiek</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 3</h2>");
 echo("<h3>suma lat wszystkich pracowników</h3>");
@@ -72,9 +68,7 @@ echo("<th>suma lat</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 2';
 echo("<h2>Zadanie 4</h2>");
 echo("<h3>suma lat pracowników z działu handel</h3>");
@@ -88,9 +82,7 @@ echo("<th>suma lat z działu handel</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 2 and imie like "%a"';
 echo("<h2>Zadanie 5</h2>");
 echo("<h3>suma lat kobiet z działu handel</h3>");
@@ -104,9 +96,7 @@ echo("<th>suma lat z działu handel</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 2 and imie not like "%a"';
 echo("<h2>Zadanie 6</h2>");
 echo("<h3>suma lat mężczyzn z działu handel</h3>");
@@ -120,9 +110,7 @@ echo("<th>suma lat z działu handel</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 7</h2>");
 echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
@@ -137,9 +125,7 @@ echo("<th>dzial</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 8</h2>");
 echo("<h3>suma lat pracowników w poszczególnych działach</h3>");
@@ -154,9 +140,7 @@ echo("<th>dzial</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT *, max(YEAR(curdate())-YEAR(data_urodzenia)) AS najstarszy FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 9</h2>");
 echo("<h3>najstarsi pracownicy w każdym dziale</h3>");
@@ -172,9 +156,7 @@ echo("<th>wiek</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM pracownicy, organizacja where dzial = id_org and dzial in(1, 2) group by dzial';
 echo("<h2>Zadanie 10</h2>");
 echo("<h3>najmłodsi pracownicy z działu handel i serwis</h3>");
@@ -189,9 +171,7 @@ echo("<th>wiek</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM pracownicy, organizacja where dzial = id_org and dzial in(1, 2) group by dzial';
 echo("<h2>Zadanie 11</h2>");
 echo("<h3>najmłodsi pracownicy z działu handel i serwis</h3>");
@@ -207,9 +187,7 @@ echo("<th>wiek</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) AS dni_zycia FROM pracownicy';
 echo("<h2>Zadanie 12</h2>");
 echo("<h3>długość życia pracowników w dniach</h3>");
@@ -224,9 +202,7 @@ echo("<th>dni życia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie NOT LIKE "%a" ORDER BY data_urodzenia ASC LIMIT 1';
 echo("<h2>Zadanie 13</h2>");
 echo("<h3>najstarszy mężczyzna</h3>");
@@ -243,9 +219,7 @@ echo("<th>data urodzenia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W") from pracownicy';
 echo("<h2>Zadanie 14</h2>");
 echo("<h3>wyświetl nazwy dni w dacie urodzenia</h3>");
@@ -263,9 +237,7 @@ echo("<th>data urodzenia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql1 = 'SET lc_time_names = "pl_PL"';
 $sql2 = 'SELECT DATE_FORMAT(CURDATE(), "%W") as data';
 echo("<h2>Zadanie 15</h2>");
@@ -283,9 +255,7 @@ echo("<th>nazwa dnia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%M") from pracownicy';
 echo("<h2>Zadanie 16</h2>");
 echo("<h3>wyświetl nazwy miesięcy w dacie urodzenia</h3>");
@@ -303,9 +273,7 @@ echo("<th>data urodzenia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT curtime(4) as godzina';
 echo("<h2>Zadanie 17</h2>");
 echo("<h3>Obecna, dokładna godzina</h3>");
@@ -319,9 +287,7 @@ echo("<th>godzina</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
 echo("<h2>Zadanie 18</h2>");
 echo("<h3>Wyświetl datę urodzenia w formie: rok-miesiąc-dzień</h3>");
@@ -339,9 +305,7 @@ echo("<th>data urodzenia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy';
 echo("<h2>Zadanie 19</h2>");
 echo("<h3>Ile godzin, minut już żyjesz</h3>");
@@ -358,9 +322,7 @@ echo("<th>minuty</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT DATE_FORMAT("2003-08-08", "%j") as NrDniaRoku_Urodzenie';
 echo("<h2>Zadanie 20</h2>");
 echo("<h3>W którym dniu roku urodziłeś się</h3>");
@@ -374,9 +336,7 @@ echo("<th>dzień urodzenia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT
 DATE_FORMAT(data_urodzenia,"%W") as dzien, imie, data_urodzenia
 FROM
@@ -406,9 +366,7 @@ echo("<th>data urodzenia</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT Count(DATE_FORMAT(data_urodzenia, "%W")) as IloscPracUr_Monday FROM pracownicy where DATE_FORMAT(data_urodzenia, "%W")="poniedziałek"';
 echo("<h2>Zadanie 22</h2>");
 echo("<h3>Ilu pracowników urodziło się w poniedziałek</h3>");
@@ -422,9 +380,7 @@ echo("<th>ilość pracowników urodzonych w poniedziałek</th>");
         echo("</tr>");
     }
 echo("</table>");
-?>
-<?php
-require_once("../connect.php");
+
 $sql = 'SELECT Count(DATE_FORMAT(data_urodzenia,"%W")) as ilosc, DATE_FORMAT(data_urodzenia,"%W") as dzien FROM pracownicy group by dzien ORDER BY CASE WHEN dzien = "Poniedziałek" THEN 1 WHEN dzien = "Wtorek" THEN 2 WHEN dzien = "Środa" THEN 3 WHEN dzien= "Czwartek" THEN 4 WHEN dzien = "Piątek" THEN 5 WHEN dzien = "Sobota" THEN 6 WHEN dzien = "Niedziela" THEN 7 END ASC';
 echo("<h2>Zadanie 23</h2>");
 echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
