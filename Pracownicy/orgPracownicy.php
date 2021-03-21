@@ -22,8 +22,6 @@
     <div class="item colorGreen">
 
 <?php
-    $d=strtotime("now");
-    echo "<li>".date("Y-m-d h:i:sa", $d) . "<br>";
     require_once("../connect.php");
     $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org';
     echo("<h2>Zadanie 1</h2>");
