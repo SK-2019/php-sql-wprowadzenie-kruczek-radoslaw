@@ -24,11 +24,11 @@
 
 <?php
     require_once("../connect.php");
-    $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial = 2';
+    $sql = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
     echo("<h2>Zadanie 1</h2>");
     echo("<h3>Pracownicy tylko z działu 2</h3>");
     echo("<li>".$sql);
-    $result = $conn->query($sql);
+    $result = $conn->query($sql) or die($conn->error);
     echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
     echo("<th>imie</th>");
