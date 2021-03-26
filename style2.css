@@ -2,10 +2,18 @@
     background-color: blueviolet;
     width: 70%;
     height: 600px;
+    margin: 10px;
 }
 
 .nav {
     background-color: chartreuse;
     width: 200px;
     height: 200px;
+}
+
+.container2 {
+    background-color: blueviolet;
+    width: 70%;
+    height: 600px;
+    margin: 10px;
 }
