@@ -76,3 +76,12 @@
     margin: 10px;
     display: flex;
 }
+
+.container9 {
+    background-color: blueviolet;
+    width: 70%;
+    height: 600px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
