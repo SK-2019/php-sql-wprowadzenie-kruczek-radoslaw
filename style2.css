@@ -120,11 +120,12 @@
     background-color: cadetblue;
     text-decoration: none;
     color: brown;
+    transition: 1.5s;
 }
 
 .menu:hover {
     padding: 1.5rem;
-    margin: 10px;
+    margin: 2px;
     background-color: cadetblue;
     text-decoration: none;
     color: brown; 
