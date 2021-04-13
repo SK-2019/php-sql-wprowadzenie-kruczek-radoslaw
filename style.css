@@ -86,7 +86,7 @@ a {
 a:hover {
 background-color:  rgb(80, 13, 13);
 background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
-padding: 1.5rem;
+padding: 10rem;
 }
 
 li {
