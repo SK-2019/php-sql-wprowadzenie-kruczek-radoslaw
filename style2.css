@@ -144,7 +144,7 @@
 .menu2:hover {
     padding: 1rem;
     margin: 1px;
-    background-color: cadetblue;
+    background-color: fuchsia;
     text-decoration: none;
-    color: brown; 
+    color: goldenrod; 
 }
