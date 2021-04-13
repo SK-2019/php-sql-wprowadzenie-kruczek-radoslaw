@@ -140,3 +140,11 @@
     transition: 0.5s;
     display: block;
 }
+
+.menu2:hover {
+    padding: 1rem;
+    margin: 1px;
+    background-color: cadetblue;
+    text-decoration: none;
+    color: brown; 
+}
