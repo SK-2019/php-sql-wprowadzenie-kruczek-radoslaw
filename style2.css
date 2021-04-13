@@ -156,3 +156,18 @@
     text-decoration: none;
     color: goldenrod; 
 }
+
+.menu3 {
+    padding: 0.75rem;
+    margin: 1px;
+    background-color: cadetblue;
+    text-decoration: none;
+    color: brown;
+    transition: 0.5s;
+    display: block;
+}
+
+.menu3:hover {
+    margin: 1px;
+    border-radius: 40px;
+}
