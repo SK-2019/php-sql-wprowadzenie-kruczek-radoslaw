@@ -80,13 +80,13 @@ a {
   font-size: 1.25em;
   display: block;
   padding: 1rem;
-  transition: 0.2s;
+
 }
 
 a:hover {
 background-color:  rgb(80, 13, 13);
 background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
-padding: 10rem;
+
 }
 
 li {
