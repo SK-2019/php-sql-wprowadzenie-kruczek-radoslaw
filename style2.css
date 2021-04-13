@@ -117,4 +117,6 @@
 .menu {
     padding: 1rem;
     background-color: cadetblue;
+    text-decoration: none;
+    color: brown;
 }
