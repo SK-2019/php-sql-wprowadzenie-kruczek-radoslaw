@@ -124,8 +124,8 @@
 }
 
 .menu:hover {
-    padding: 1.5rem;
-    margin: 2px;
+    padding: 1rem;
+    margin: 1px;
     background-color: cadetblue;
     text-decoration: none;
     color: brown; 
