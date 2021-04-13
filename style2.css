@@ -114,8 +114,8 @@
     display: flex;
 }
 
-a {
-    padding: 1rem;
+.menu {
+    padding: 50px;
     background-color: cadetblue;
     text-decoration: none;
     color: brown;
