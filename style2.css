@@ -121,3 +121,11 @@
     text-decoration: none;
     color: brown;
 }
+
+.menu:hover {
+    padding: 1.5rem;
+    margin: 10px;
+    background-color: cadetblue;
+    text-decoration: none;
+    color: brown; 
+}
