@@ -186,4 +186,5 @@
 .menu4:hover {
     margin: 1px;
     background-color: rgba(95, 158, 160, 0.397);
+    padding: 0.5rem;
 }
