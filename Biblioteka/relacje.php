@@ -21,13 +21,30 @@
         <li class="nav_item"><a href="Dane-do-bazy/daneDoBazy.php">Dane do Bazy</a></li>
         <li class="nav_item"><a href="Biblioteka/ksiazki.php">Książki</a></li>
         <li class="nav_item"><a href="flexbox/flexbox.html">Flexbox</a></li>
-        <li class="nav_item"><a href="Biblioteka/relacje.php">Relacje wiele do wielu</a></li>
+        <li class="nav_item"><a href="../index.php">strona główna</a></li>
+        <li class="nav_item"><a href="relacje.php">Relacje wiele do wielu</a></li>
         <li class="nav_item"><a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
         </ul>
       </div>
-      <div class="item colorGreen"></div>
+      <div class="item colorGreen">
+      <?php
+      require_once("../connect.php");
+    $sql = "SELECT * FROM autor";
+    echo("<h3>Autorzy</h3>");
+    echo("<li>".$sql);
+    $result = $conn->query($sql) or die($conn->error);
+    echo("<table border=0>");
+    echo("<th>id</th>");
+    echo("<th>nazwisko</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['nazwisko']."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+    ?>
+      </div>
     </div>
   </body>
 </html>
-
-

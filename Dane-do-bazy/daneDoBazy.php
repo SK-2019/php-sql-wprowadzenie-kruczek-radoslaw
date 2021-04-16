@@ -16,6 +16,7 @@
         <li class="nav_item"><a href="../Pracownicy\Data_i_Czas.php">Data i czas</a></li>
         <li class="nav_item"><a href="../Biblioteka\ksiazki.php">Książki</a></li>
         <li class="nav_item"><a href="../index.php">strona główna</a></li>
+		<li class="nav_item"><a href="../Biblioteka/relacje.php">Relacje wiele do wielu</a></li>
         <li class="nav_item"><a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
 		</ul>
 	</div>
