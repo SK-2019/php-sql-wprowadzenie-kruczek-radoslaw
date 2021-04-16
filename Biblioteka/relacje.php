@@ -59,7 +59,7 @@
     }
     echo("</table>");
 
-    $sql = "SELECT * FROM autor, tytul, autor_tytul where autor_id=id and tytul_id=id";
+    $sql = "SELECT * FROM autor, tytul, autor_tytul";
     echo("<h3>Autorzy i Tytuły</h3>");
     echo("<li>".$sql);
     $result = $conn->query($sql) or die($conn->error);
