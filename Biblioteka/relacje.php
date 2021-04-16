@@ -43,6 +43,37 @@
         echo("</tr>");
     }
     echo("</table>");
+
+    $sql = "SELECT * FROM tytul";
+    echo("<h3>Tytuły</h3>");
+    echo("<li>".$sql);
+    $result = $conn->query($sql) or die($conn->error);
+    echo("<table border=0>");
+    echo("<th>id</th>");
+    echo("<th>tytul</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['tytul']."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+
+    $sql = "SELECT * FROM autor, tytul, autor_tytul where autor_id=id and tytul_id=id";
+    echo("<h3>Autorzy i Tytuły</h3>");
+    echo("<li>".$sql);
+    $result = $conn->query($sql) or die($conn->error);
+    echo("<table border=0>");
+    echo("<th>id</th>");
+    echo("<th>autor_id</th>");
+    echo("<th>tytul_id</th>");
+
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['autor_id']."</td><td>".$wiersz['tytul_id']."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
     ?>
       </div>
     </div>
