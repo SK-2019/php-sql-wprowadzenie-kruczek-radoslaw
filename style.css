@@ -68,11 +68,23 @@ color: white;
 
 }
 
+.item {
+  border-radius: 25px;
+  text-align: center;
+  text-decoration: none;
+  background-color: rgb(47, 10, 151);
+  background-image: linear-gradient(darkblue, darkred);
+  margin: 5px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 1.25em;
+  display: block;
+  padding: 1rem;
+
+}
 
 
 
-
-.nav:hover {
+.item:hover {
 background-color:  rgb(80, 13, 13);
 background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
 
