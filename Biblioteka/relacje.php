@@ -13,7 +13,7 @@
         <h1 class="title">Radosław Kruczek</h1>
       </div>
       <div class="item colorBlue">
-       <?php require("menu.php"); ?>
+       <?php require_once("menu.php"); ?>
       </div>
       <div class="item colorGreen">
       <?php
