@@ -68,7 +68,7 @@ color: white;
 
 }
 
-.item {
+.navbar {
   border-radius: 25px;
   text-align: center;
   text-decoration: none;
@@ -84,7 +84,7 @@ color: white;
 
 
 
-.item:hover {
+.navbar:hover {
 background-color:  rgb(80, 13, 13);
 background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
 
