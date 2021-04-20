@@ -65,8 +65,8 @@
     $result = $conn->query($sql) or die($conn->error);
     echo("<table border=0>");
     echo("<th>id</th>");
-    echo("<th>autor_id</th>");
-    echo("<th>tytul_id</th>");
+    echo("<th>nazwisko</th>");
+    echo("<th>tytul</th>");
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
