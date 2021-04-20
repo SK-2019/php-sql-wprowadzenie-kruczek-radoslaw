@@ -13,7 +13,7 @@
         <h1 class="title">Radosław Kruczek</h1>
       </div>
       <div class="item colorBlue">
-       <?php include("menu.php"); ?>
+       <?php include("../menu.php"); ?>
       </div>
       <div class="item colorGreen">
       <?php
