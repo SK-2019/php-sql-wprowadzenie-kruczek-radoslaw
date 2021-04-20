@@ -70,7 +70,7 @@
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['id']."</td><td>".$wiersz['id_autor']."</td><td>".$wiersz['id_tytul']."</td>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['nazwisko']."</td><td>".$wiersz['tytul']."</td>");
         echo("</tr>");
     }
     echo("</table>");
