@@ -39,7 +39,7 @@
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['autor.id']."</td><td>".$wiersz['nazwisko']."</td>");
+        echo("<td>".$wiersz['id_autor']."</td><td>".$wiersz['nazwisko']."</td>");
         echo("</tr>");
     }
     echo("</table>");
@@ -54,12 +54,12 @@
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['tytul.id']."</td><td>".$wiersz['tytul']."</td>");
+        echo("<td>".$wiersz['id_tytul']."</td><td>".$wiersz['tytul']."</td>");
         echo("</tr>");
     }
     echo("</table>");
 
-    $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = autor.id and tytul_id = tytul.id';
+    $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul';
     echo("<h3>Autorzy i Tytuły</h3>");
     echo("<li>".$sql);
     $result = $conn->query($sql) or die($conn->error);
