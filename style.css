@@ -61,7 +61,7 @@ color: white;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 15%;
+  width: 200px;
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -83,7 +83,6 @@ color: white;
 }
 
 
-
 .navbar:hover {
 background-color:  rgb(80, 13, 13);
 background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
@@ -94,6 +93,7 @@ background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
   padding: 1rem;
   background-color: rgb(47, 10, 151);
   color: rgb(255, 255, 255);
+  border-radius: 5px;
 }
 
 li {
@@ -125,6 +125,8 @@ text-align: center;
 
 .header {
   width: 100%;
+  display: flex;
+  justify-content: end;
 }
 
 .menu {
