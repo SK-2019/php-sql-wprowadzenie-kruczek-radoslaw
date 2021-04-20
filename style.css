@@ -90,6 +90,12 @@ background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
 
 }
 
+.click {
+  padding: 1rem;
+  background-color: rgb(47, 10, 151);
+  color: rgb(255, 255, 255);
+}
+
 li {
   text-align: center;
   font-size: 1em;
