@@ -113,7 +113,6 @@ text-align: center;
 
 .title {
   display: flex;
-  justify-content: space-between;
   color: rgb(55, 51, 82);
   text-shadow: 0px 2px 2px rgba(59, 59, 59, 0.616);
 }
@@ -128,7 +127,7 @@ text-align: center;
 .header {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 .menu {
