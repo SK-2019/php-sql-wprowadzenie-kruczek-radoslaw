@@ -34,7 +34,7 @@
     echo("<li>".$sql);
     $result = $conn->query($sql) or die($conn->error);
     echo("<table border=0>");
-    echo("<th>autor.id</th>");
+    echo("<th>id_autor</th>");
     echo("<th>nazwisko</th>");
 
     while($wiersz=$result->fetch_assoc()){
@@ -49,7 +49,7 @@
     echo("<li>".$sql);
     $result = $conn->query($sql) or die($conn->error);
     echo("<table border=0>");
-    echo("<th>tytul.id</th>");
+    echo("<th>id_tytul</th>");
     echo("<th>tytul</th>");
 
     while($wiersz=$result->fetch_assoc()){
@@ -70,7 +70,7 @@
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['id']."</td><td>".$wiersz['autor_id']."</td><td>".$wiersz['tytul_id']."</td>");
+        echo("<td>".$wiersz['id']."</td><td>".$wiersz['id_autor']."</td><td>".$wiersz['id_tytul']."</td>");
         echo("</tr>");
     }
     echo("</table>");
