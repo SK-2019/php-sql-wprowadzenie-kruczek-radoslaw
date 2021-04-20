@@ -8,13 +8,13 @@
 </head>
 <body>
 <div class="container">
-	<div class="item colorRed">
+	<div class="header">
 		<?php include("../header.php"); ?>
 	</div>
-	<div class="item colorBlue">
+	<div class="menu">
 	<?php include("../menu.php"); ?>
 	</div>
-	<div class="item colorGreen">
+	<div class="main">
 	<h3>dodawanie pracownika</h3>
 	<form action="insert.php" method="POST">
 	    <input type="text" name="name" placeholder="name"></br>

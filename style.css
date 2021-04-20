@@ -121,24 +121,20 @@ text-align: center;
   flex-wrap: wrap;
 }
 
-.item {
-  width: 200px;
-  height: 100px;
-  margin: 10px;
-}
 
-.colorRed {
+
+.header {
   width: 100%;
 }
 
-.colorBlue {
+.menu {
   width: 20%;
   flex-direction: column;
   display: flex;
   
 }
 
-.colorGreen {
+.main {
   width: 70%;
 }
 

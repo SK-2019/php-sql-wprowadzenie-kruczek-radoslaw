@@ -4,14 +4,14 @@
         <title>Biblioteka</title>
     </head>
 <div class="container">
-    <div class="item colorRed">
+    <div class="header">
   
         <?php include("../header.php"); ?>
     </div>
-    <div class="item colorBlue">
+    <div class="menu">
     <?php include("../menu.php"); ?>
     </div>
-    <div class="item colorGreen">
+    <div class="main">
     <form action='ksiazki2.php' method='POST'>
 <?php
 

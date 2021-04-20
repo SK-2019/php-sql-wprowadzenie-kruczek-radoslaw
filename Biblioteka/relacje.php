@@ -9,14 +9,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="item colorRed">
+      <div class="header">
        
         <?php include("../header.php"); ?>
       </div>
-      <div class="item colorBlue">
+      <div class="menu">
        <?php include("../menu.php"); ?>
       </div>
-      <div class="item colorGreen">
+      <div class="main">
       <?php
       require_once("../connect.php");
     $sql = "SELECT * FROM autor";
