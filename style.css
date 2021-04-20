@@ -59,18 +59,10 @@ color: white;
 
 .nav {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 15%;
+  width: 2em;
   position: fixed;
   height: 100%;
   overflow: auto;
-
-}
-
-
-
-a {
   border-radius: 25px;
   text-align: center;
   text-decoration: none;
@@ -81,10 +73,13 @@ a {
   font-size: 1.25em;
   display: block;
   padding: 1rem;
-
 }
 
-a:hover {
+
+
+
+
+.nav:hover {
 background-color:  rgb(80, 13, 13);
 background-image: linear-gradient(rgb(4, 4, 99), rgb(78, 2, 2));
 
