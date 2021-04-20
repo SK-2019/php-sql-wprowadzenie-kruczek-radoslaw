@@ -9,7 +9,7 @@
 <body>
 <div class="container">
 	<div class="item colorRed">
-		<?php include("/notion.php"); ?>
+		<?php include("../notion.php"); ?>
 	</div>
 	<div class="item colorBlue">
 	<?php include("../menu.php"); ?>

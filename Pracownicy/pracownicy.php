@@ -7,7 +7,7 @@
 <div class="container">
     <div class="item colorRed">
         <h1 class="title">Radosław Kruczek</h1>
-        <?php include("/notion.php"); ?>
+        <?php include("../notion.php"); ?>
     </div>
     <div class="item colorblue">
     <?php include("../menu.php"); ?>
