@@ -9,16 +9,7 @@
         <h1 class="title">Radosław Kruczek</h1>
     </div>
     <div class="item colorblue">
-        <ul class="nav">
-        <li class="nav_item"><a href="orgPracownicy.php">Organizacja i Pracownicy</a></li>
-        <li class="nav_item"><a href="agregat.php">Funkcje Agregujące</a></li>
-        <li class="nav_item"><a href="Data_i_Czas.php">Data i czas</a></li>
-        <li class="nav_item"><a href="../Dane-do-bazy\daneDoBazy.php">Dane do Bazy</a></li>
-        <li class="nav_item"><a href="../Biblioteka\ksiazki.php">Książki</a></li>
-        <li class="nav_item"><a href="../index.php">strona główna</a></li>
-        <li class="nav_item"><a href="../Biblioteka/relacje.php">Relacje wiele do wielu</a></li>
-        <li class="nav_item"><a href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
-        </ul>
+    <?php include("../menu.php"); ?>
     </div>
     <div class="item colorGreen">
         
