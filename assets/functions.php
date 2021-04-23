@@ -26,5 +26,12 @@ function wow(){
 
 }
 
+function delete(){
+
+    echo("<form action='delete.php' method='POST'>");
+   			echo("<input type='number' name='id' value='".$wiersz['id_autor']."' hidden></br>");
+   			echo("<input type='submit' value='Usuń'>");
+		echo("</form>");
+}
 
 ?>

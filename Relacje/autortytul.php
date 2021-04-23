@@ -29,7 +29,7 @@
 
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['id_autor']."</td><td>".$wiersz['nazwisko']."</td>");
+        echo("<td>".$wiersz['id_autor']."</td><td>".$wiersz['nazwisko']."</td><td>".delete()."</td>");
         echo("</tr>");
     }
     echo("</table>");
