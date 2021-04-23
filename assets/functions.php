@@ -16,7 +16,15 @@ function table($sql){
     }
     echo("</table>");
 
+}
+
+function echo(){
+
+    for($i=1;$i<5;$i++){
+        echo("$i");
+    }
 
 }
+
 
 ?>
