@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Dane do Bazy</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
 <div class="container">
 	<div class="header">
-		<?php include("../header.php"); ?>
+		<?php include("../assets/header.php"); ?>
 	</div>
 	<div class="menu">
-	<?php include("../menu.php"); ?>
+	<?php include("../assets/menu.php"); ?>
 	</div>
 	<div class="main">
 	<h3>dodawanie pracownika</h3>

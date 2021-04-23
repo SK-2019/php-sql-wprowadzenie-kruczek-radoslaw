@@ -7,15 +7,15 @@
 <div class="container">
 <div class="header">
   
-    <?php include("../header.php"); ?>
+    <?php include("../assets/header.php"); ?>
 </div>
     <div class="menu">
-    <?php include("../menu.php"); ?>
+    <?php include("../assets/menu.php"); ?>
     </div>
     <div class="main">
 
 <?php
-require_once("../connect.php");
+require_once("../assets/connect.php");
 $sql = 'SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja where dzial=id_org;';
 echo("<h2>Zadanie 1</h2>");
 echo("<h3>wiek poszczególnych pracowników</h3>");

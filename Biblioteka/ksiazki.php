@@ -6,10 +6,10 @@
 <div class="container">
     <div class="header">
   
-        <?php include("../header.php"); ?>
+        <?php include("../assets/header.php"); ?>
     </div>
     <div class="menu">
-    <?php include("../menu.php"); ?>
+    <?php include("../assets/menu.php"); ?>
     </div>
     <div class="main">
     <form action='ksiazki2.php' method='POST'>
@@ -18,7 +18,7 @@
 
 
 
-    require_once("../connect.php");
+    require_once("../assets/connect.php");
 
     $sql = ("SELECT * from biblAutor");
 
