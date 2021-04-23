@@ -18,10 +18,10 @@ function table($sql){
 
 }
 
-function echo(){
+function wow(){
 
     for($i=1;$i<5;$i++){
-        echo("$i");
+        echo("5");
     }
 
 }
