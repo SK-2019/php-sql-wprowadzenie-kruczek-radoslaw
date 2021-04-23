@@ -1,6 +1,6 @@
 <?php
 
-function table($sql){
+function table($p){
     require_once("../assets/connect.php");
     $result = $conn->query($sql) or die($conn->error);
     echo("<table border=0>");
