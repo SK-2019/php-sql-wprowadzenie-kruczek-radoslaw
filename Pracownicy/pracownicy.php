@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="/assets/style.css">
         <title>Pracownicy</title>
     </head>
-</html>
+
 <div class="container">
     <div class="header">
         
@@ -14,28 +14,29 @@
     </div>
     <div class="main">
         
+        <?php
+            include("../assets/functions.php");
+            $p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
+            echo("<h2>Zadanie 1</h2>");
+            echo("<h3>Pracownicy tylko z działu 2</h3>");
+            echo("<li>".$p);
+            table($p);
 
-<?php
-    include("../assets/functions.php");
-    $p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
-    echo("<h2>Zadanie 1</h2>");
-    echo("<h3>Pracownicy tylko z działu 2</h3>");
-    echo("<li>".$p);
-    table($p);
 
+            
+            $p = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
+            echo("<h2>Zadanie 2</h2>");
+            echo("<h3>Pracownicy tylko z działu 2 i z działu 3</h3>");
+            echo("<li>".$p);
+            table($p);
 
-    
-    $p = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
-    echo("<h2>Zadanie 2</h2>");
-    echo("<h3>Pracownicy tylko z działu 2 i z działu 3</h3>");
-    echo("<li>".$p);
-    table($p);
-
-    $p = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and zarobki < 30';
-    echo("<h2>Zadanie 3</h2>");
-    echo("<h3>Pracownicy tylko z zarobkami mniejszymi niż 30</h3>");
-    echo("<li>".$p);
-    table($p);
-?>
+            $p = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and zarobki < 30';
+            echo("<h2>Zadanie 3</h2>");
+            echo("<h3>Pracownicy tylko z zarobkami mniejszymi niż 30</h3>");
+            echo("<li>".$p);
+            table($p);
+        ?>
+        
     </div>
 </div>
+</html>
