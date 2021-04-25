@@ -12,9 +12,5 @@
         <li><a class="navbar" href="/Relacje/lekarzpacjent.php">Lekarz - Pacjent</a></li>
         <li><a class="navbar" href="/Relacje/mechanikauto.php">Mechanik - Auto</a></li>
         <li><a class="navbar" href="/Relacje/fryzjerklient.php">Fryzjer - Klient</a></li>
-        <li><a class="navbar" href="/Relacje/producentartykul.php">Producenci - Artykuły</a></li>
-        <li><a class="navbar" href="/Relacje/sprawaprawnik.php">Sprawa sądowa - Prawnik</a></li>
-        <li><a class="navbar" href="/Relacje/osobarola.php">Osoba - Rola</a></li>
-        <li><a class="navbar" href="/Relacje/pracownikprojekt.php">Pracownik - Projekt</a></li>
         <li><a class="navbar" href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
 </ul>

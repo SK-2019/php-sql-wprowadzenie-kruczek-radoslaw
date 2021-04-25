@@ -56,7 +56,7 @@
             $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and zarobki < 30';
             echo("<h2>Zadanie 3</h2>");
             echo("<h3>Pracownicy tylko z zarobkami mniejszymi niż 30</h3>");
-            echo("<li>".$p);
+            echo("<li>".$sql);
             $result = $conn->query($sql);
             echo("<table border=0>");
             echo("<th>id_pracownicy</th>");
