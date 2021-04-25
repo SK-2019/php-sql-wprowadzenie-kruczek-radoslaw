@@ -2,7 +2,7 @@
 
 function table($sql){
     require_once("../assets/connect.php");
-    $result = $conn->query($sql) or die($conn->error);
+    $result = $conn->query($sql);
     echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
     echo("<th>imie</th>");
