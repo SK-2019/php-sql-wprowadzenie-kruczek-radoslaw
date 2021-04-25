@@ -48,7 +48,7 @@
           }
           echo("</table>");
 
-          $sql = "SELECT * FROM nauczyciele, klasy, naucz_klasa where nazwa_nauczyciel = id_Nauczyciela and nazw_klasa = id_klasy ";
+          $sql = "SELECT * FROM nauczyciele, klasy, naucz_klasa where nazwa_nauczyciel = id_Nauczyciela and nazwa_klasa = id_klasy ";
           echo("<h3>Nauczyciele i Klasy</h3>");
           echo("<li>".$sql);
           $result = $conn->query($sql) or die($conn->error);
