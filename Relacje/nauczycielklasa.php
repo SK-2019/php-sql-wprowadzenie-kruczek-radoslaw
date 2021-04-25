@@ -28,7 +28,22 @@
 
           while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
-              echo("<td>".$wiersz['id_nauczyciela']."</td><td>".$wiersz['nazwisko']."</td>");
+              echo("<td>".$wiersz['id_Nauczyciela']."</td><td>".$wiersz['nazwisko']."</td>");
+              echo("</tr>");
+          }
+          echo("</table>");
+
+          $sql = "SELECT * FROM klasy";
+          echo("<h3>Nauczyciele</h3>");
+          echo("<li>".$sql);
+          $result = $conn->query($sql) or die($conn->error);
+          echo("<table border=0>");
+          echo("<th>id_klasy</th>");
+          echo("<th>klasa</th>");
+
+          while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz['id_klasy']."</td><td>".$wiersz['klasa']."</td>");
               echo("</tr>");
           }
           echo("</table>");
