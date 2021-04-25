@@ -15,7 +15,7 @@
     <div class="main">
         
         <?php
-            include("../assets/functions.php");
+            include_once("../assets/functions.php");
             $p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
             echo("<h2>Zadanie 1</h2>");
             echo("<h3>Pracownicy tylko z działu 2</h3>");
