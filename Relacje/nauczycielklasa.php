@@ -53,7 +53,8 @@
           echo("<li>".$sql);
           $result = $conn->query($sql) or die($conn->error);
           echo("<table border=0>");
-          echo("<th>id_klasy</th>");
+          echo("<th>id</th>");
+          echo("<th>nauczyciel</th>");
           echo("<th>klasa</th>");
 
           while($wiersz=$result->fetch_assoc()){
