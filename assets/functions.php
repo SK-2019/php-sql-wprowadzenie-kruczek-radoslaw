@@ -15,7 +15,7 @@ function table($sql){
         echo("</tr>");
     }
     echo("</table>");
-
+    $conn->close();
 }
 
 function table2($sql){
@@ -33,7 +33,7 @@ function table2($sql){
         echo("</tr>");
     }
     echo("</table>");
-
+    $conn->close();
 }
 
 function wow(){
