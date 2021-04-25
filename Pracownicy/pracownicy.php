@@ -23,6 +23,7 @@
             table($p);
 
             wow();
+            wow();
             
             $p = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
             echo("<h2>Zadanie 2</h2>");
