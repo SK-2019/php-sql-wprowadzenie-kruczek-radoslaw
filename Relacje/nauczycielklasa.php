@@ -15,7 +15,25 @@
       <div class="menu">
       <?php include("../assets/menu.php"); ?>
       </div>
-      <div class="main"></div>
+      <div class="main">
+        <?php
+          require_once("../assets/connect.php");
+          $sql = "SELECT * FROM nauczyciele";
+          echo("<h3>Nauczyciele</h3>");
+          echo("<li>".$sql);
+          $result = $conn->query($sql) or die($conn->error);
+          echo("<table border=0>");
+          echo("<th>id_nauczyciela</th>");
+          echo("<th>nazwisko</th>");
+
+          while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz['id_nauczyciela']."</td><td>".$wiersz['nazwisko']."</td>");
+              echo("</tr>");
+          }
+          echo("</table>");
+        ?>
+      </div>
     </div>
   </body>
 </html>
