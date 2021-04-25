@@ -59,7 +59,7 @@
 
           while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
-              echo("<td>".$wiersz['id']."</td><td>".$wiersz['nauczyciel']."</td><td>".$wiersz['klasa']."</td>");
+              echo("<td>".$wiersz['id']."</td><td>".$wiersz['nazwisko']."</td><td>".$wiersz['klasa']."</td>");
               echo("</tr>");
           }
           echo("</table>");
