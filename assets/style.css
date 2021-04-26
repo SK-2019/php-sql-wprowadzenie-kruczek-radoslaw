@@ -157,16 +157,6 @@ text-align: center;
   justify-content: space-between;
 }
 
-.menu {
-  width: 20%;
-  flex-direction: column;
-  display: flex;
-  
-}
-
-.main {
-  width: 70%;
-}
 
 input {
   border-collapse: collapse;
