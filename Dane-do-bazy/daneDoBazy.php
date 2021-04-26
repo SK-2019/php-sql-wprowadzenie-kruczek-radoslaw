@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Dane do Bazy</title>
-  <link rel="stylesheet" href="/assets/style.css">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Radosław Kruczek</title>
+	<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
 <div class="container">
@@ -62,3 +62,5 @@ echo("</table>");
 ?>
 	</div>
 </div>
+</body>
+</html>
