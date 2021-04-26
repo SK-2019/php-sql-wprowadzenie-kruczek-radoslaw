@@ -30,7 +30,7 @@
 <?php
 
 
-require_once("../connect.php");
+require_once("../assets/connect.php");
 $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org';
 $result = $conn->query($sql);
 echo("<table border=0>");
