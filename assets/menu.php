@@ -7,6 +7,7 @@
         <li><a class="navbar" href="/Biblioteka/ksiazki.php">Książki</a></li>
         <li><a class="navbar" href="/flexbox/flexbox.html">Flexbox</a></li>
         <li><a class="navbar" href="/index.php">strona główna</a></li>
+        <li>Relacje</li>
         <li><a class="navbar" href="/Relacje/autortytul.php">Autor - Tytuł</a></li>
         <li><a class="navbar" href="/Relacje/nauczycielklasa.php">Nauczyciel - Klasa</a></li>
         <li><a class="navbar" href="/Relacje/lekarzpacjent.php">Lekarz - Pacjent</a></li>
