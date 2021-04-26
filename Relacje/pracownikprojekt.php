@@ -15,7 +15,58 @@
       <div class="menu">
       <?php include("menu.php"); ?>
       </div>
-      <div class="main"></div>
+      <div class="main">
+      <?php
+      require_once("../assets/connect.php");
+          $sql = "SELECT * FROM pracownik";
+          echo("<h3>Pracownicy</h3>");
+          echo("<li>".$sql);
+          $result = $conn->query($sql) or die($conn->error);
+          echo("<table border=0>");
+          echo("<th>id</th>");
+          echo("<th>imie</th>");
+          echo("<th>wynagrodzenie</th>");
+          echo("<th>Data urodzenia</th>");
+
+          while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz['id_pracownika']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['wynagrodzenie']."</td><td>".$wiersz['dataUrodzenia']."</td>");
+              echo("</tr>");
+          }
+          echo("</table>");
+
+          $sql = "SELECT * FROM projekt";
+          echo("<h3>Projekty</h3>");
+          echo("<li>".$sql);
+          $result = $conn->query($sql) or die($conn->error);
+          echo("<table border=0>");
+          echo("<th>id_projektu</th>");
+          echo("<th>projekt</th>");
+
+          while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz['id_projektu']."</td><td>".$wiersz['nazwa']."</td>");
+              echo("</tr>");
+          }
+          echo("</table>");
+
+          $sql = "SELECT * FROM pracownik, projekt, prac_proj where pracownik = id_pracownika and projekt = id_projektu";
+          echo("<h3>Mechanicy i Samochody</h3>");
+          echo("<li>".$sql);
+          $result = $conn->query($sql) or die($conn->error);
+          echo("<table border=0>");
+          echo("<th>id</th>");
+          echo("<th>mechanik</th>");
+          echo("<th>auto</th>");
+
+          while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa']."</td>");
+              echo("</tr>");
+          }
+          echo("</table>");
+          ?>
+      </div>
     </div>
   </body>
 </html>

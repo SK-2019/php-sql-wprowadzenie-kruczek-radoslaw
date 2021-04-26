@@ -11,6 +11,6 @@
         <li><a class="navbar" href="/Relacje/nauczycielklasa.php">Nauczyciel - Klasa</a></li>
         <li><a class="navbar" href="/Relacje/lekarzpacjent.php">Lekarz - Pacjent</a></li>
         <li><a class="navbar" href="/Relacje/mechanikauto.php">Mechanik - Auto</a></li>
-        <li><a class="navbar" href="/Relacje/fryzjerklient.php">Fryzjer - Klient</a></li>
+        <li><a class="navbar" href="/Relacje/pracownikprojekt.php">Pracownik - Projekt</a></li>
         <li><a class="navbar" href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
 </ul>
