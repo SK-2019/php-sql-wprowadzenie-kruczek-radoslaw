@@ -51,13 +51,13 @@
           echo("</table>");
 
           $sql = "SELECT * FROM pracownik, projekt, prac_proj where pracownik = id_pracownika and projekt = id_projektu";
-          echo("<h3>Mechanicy i Samochody</h3>");
+          echo("<h3>Pracownicy i projekty</h3>");
           echo("<li>".$sql);
           $result = $conn->query($sql) or die($conn->error);
           echo("<table border=0>");
           echo("<th>id</th>");
-          echo("<th>mechanik</th>");
-          echo("<th>auto</th>");
+          echo("<th>Pracownik</th>");
+          echo("<th>Projekt</th>");
 
           while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
