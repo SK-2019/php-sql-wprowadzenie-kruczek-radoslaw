@@ -50,18 +50,6 @@
           $sql = "SELECT * FROM pracownik, projekt, prac_proj where pracownik = id_pracownika and projekt = id_projektu";
           echo("<h3>Pracownicy i projekty</h3>");
           echo("<li>".$sql);
-          $result = $conn->query($sql) or die($conn->error);
-          echo("<table border=0>");
-          echo("<th>id</th>");
-          echo("<th>Pracownik</th>");
-          echo("<th>Projekt</th>");
-
-          while($wiersz=$result->fetch_assoc()){
-              echo("<tr>");
-              echo("<td>".$wiersz['id']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa']."</td>");
-              echo("</tr>");
-          }
-          echo("</table>");
           table($sql, $conn, "pracownik", "projekt", 'nazwa', 'imie');
 
           ?>
