@@ -19,7 +19,7 @@
         
         <?php
             include("../assets/functions.php");
-            require_once("../assets/connect.php");
+            //require_once("../assets/connect.php");
             $p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
             echo("<h2>Zadanie 1</h2>");
             echo("<h3>Pracownicy tylko z działu 2</h3>");
