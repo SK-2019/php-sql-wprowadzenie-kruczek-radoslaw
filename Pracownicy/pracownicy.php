@@ -19,9 +19,8 @@
         
         <?php
 
-            function table(){
+            function table($sql){
                 require_once("../assets/connect.php");
-                $sql = $p;
                 $result = $conn->query($sql);
                 echo("<table border=0>");
                 echo("<th>id_pracownicy</th>");
@@ -40,7 +39,7 @@
 
             //include("../assets/functions.php");
             //require_once("../assets/connect.php");
-            $p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
+            //$p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
             echo("<h2>Zadanie 1</h2>");
             echo("<h3>Pracownicy tylko z działu 2</h3>");
             echo("<li>".$p);
@@ -57,7 +56,7 @@
             //     echo("</tr>");
             // }
             // echo("</table>");
-            table();
+            table("SELECT * FROM pracownicy, organizacja where dzial = id_org");
             
             $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
             echo("<h2>Zadanie 2</h2>");
