@@ -17,7 +17,27 @@
       </div>
       <div class="main">
       <?php
+          ini_set('display_errors', '1');
+          ini_set('display_startup_errors', '1');
+          error_reporting(E_ALL);
+      
           require_once("../assets/connect.php");
+      
+      
+          function table($sql, $conn, $columnid, $column2, $dana, $dana2){
+      
+            $result = $conn->query($sql);
+            echo("<table border=0>");
+            echo("<th>$columnid</th>");
+            echo("<th>$column2</th>");
+            while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td>");
+              echo("</tr>");
+            }
+            echo("</table>");
+          }
+
           $sql = "SELECT * FROM mechanicy";
           echo("<h3>Mechanicy</h3>");
           echo("<li>".$sql);
@@ -32,37 +52,17 @@
               echo("</tr>");
           }
           echo("</table>");
+          table($sql, $conn, "id_mechanika", "nazwisko", 'nazwisko', 'id_mechanika');
 
           $sql = "SELECT * FROM samochody";
           echo("<h3>Samochody</h3>");
           echo("<li>".$sql);
-          $result = $conn->query($sql) or die($conn->error);
-          echo("<table border=0>");
-          echo("<th>id_auta</th>");
-          echo("<th>model</th>");
-
-          while($wiersz=$result->fetch_assoc()){
-              echo("<tr>");
-              echo("<td>".$wiersz['id_auta']."</td><td>".$wiersz['model']."</td>");
-              echo("</tr>");
-          }
-          echo("</table>");
+          table($sql, $conn, "id_auta", "model", 'model', 'id_auta');
 
           $sql = "SELECT * FROM mechanicy, samochody, auto_mech where mechanik = id_mechanika and auto = id_auta";
           echo("<h3>Mechanicy i Samochody</h3>");
           echo("<li>".$sql);
-          $result = $conn->query($sql) or die($conn->error);
-          echo("<table border=0>");
-          echo("<th>id</th>");
-          echo("<th>mechanik</th>");
-          echo("<th>auto</th>");
-
-          while($wiersz=$result->fetch_assoc()){
-              echo("<tr>");
-              echo("<td>".$wiersz['id']."</td><td>".$wiersz['nazwisko']."</td><td>".$wiersz['model']."</td>");
-              echo("</tr>");
-          }
-          echo("</table>");
+          table($sql, $conn, "mechanik", "auto", 'model', 'nazwisko');
         ?>
       </div>
     </div>
