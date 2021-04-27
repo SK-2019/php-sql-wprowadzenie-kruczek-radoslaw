@@ -49,17 +49,7 @@
     $sql = "SELECT * FROM tytul";
     echo("<h3>Tytuły</h3>");
     echo("<li>".$sql);
-    $result = $conn->query($sql) or die($conn->error);
-    echo("<table border=0>");
-    echo("<th>id_tytul</th>");
-    echo("<th>tytul</th>");
-
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['id_tytul']."</td><td>".$wiersz['tytul']."</td>");
-        echo("</tr>");
-    }
-    echo("</table>");
+    table($sql, $conn, "id_tytul", "tytul", 'tytul');
 
     $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul';
     echo("<h3>Autorzy i Tytuły</h3>");
