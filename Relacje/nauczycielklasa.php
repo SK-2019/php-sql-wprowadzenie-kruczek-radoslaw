@@ -41,7 +41,7 @@
           $sql = "SELECT * FROM nauczyciele";
           echo("<h3>Nauczyciele</h3>");
           echo("<li>".$sql);
-          table($sql, $conn, "id_nauczyciela", "nazwisko", 'nazwisko', 'id_nauczyciela');
+          table($sql, $conn, "id_Nauczyciela", "nazwisko", 'nazwisko', 'id_nauczyciela');
 
           $sql = "SELECT * FROM klasy";
           echo("<h3>Klasy</h3>");
