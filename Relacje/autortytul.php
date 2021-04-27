@@ -28,7 +28,7 @@
 
     function table($sql, $conn, $columnid, $column2, $dana){
 
-      $result = $conn->query($sql) or die($conn->error);
+      $result = $conn->query($sql);
       echo("<table border=0>");
       echo("<th>$columnid</th>");
       echo("<th>$column2</th>");
@@ -44,7 +44,7 @@
     $sql = "SELECT * FROM autor";
     echo("<h3>Autorzy</h3>");
     echo("<li>".$sql);
-    table($sql, $conn, "id_autor", "autor", 'nazwisko')
+    table($sql, $conn, "id_autor", "autor", 'nazwisko');
 
     $sql = "SELECT * FROM tytul";
     echo("<h3>Tytuły</h3>");
