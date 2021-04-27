@@ -20,10 +20,10 @@
         <?php
             include("../assets/functions.php");
             require_once("../assets/connect.php");
-            $sql = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
+            $p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
             echo("<h2>Zadanie 1</h2>");
             echo("<h3>Pracownicy tylko z działu 2</h3>");
-            echo("<li>".$sql);
+            echo("<li>".$p);
             // $result = $conn->query($sql);
             // echo("<table border=0>");
             // echo("<th>id_pracownicy</th>");
@@ -37,7 +37,7 @@
             //     echo("</tr>");
             // }
             // echo("</table>");
-            table($sql);
+            table($p);
             
             $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
             echo("<h2>Zadanie 2</h2>");

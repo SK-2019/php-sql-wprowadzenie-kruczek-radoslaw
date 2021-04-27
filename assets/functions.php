@@ -1,7 +1,7 @@
 <?php
 
 function table($sql){
-    require_once("../assets/connect.php");
+    require_once("connect.php");
     $result = $conn->query($sql);
     echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
