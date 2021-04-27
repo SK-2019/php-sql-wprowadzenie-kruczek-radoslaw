@@ -145,7 +145,7 @@ $sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM p
 echo("<h2>Zadanie 10</h2>");
 echo("<h3>najmłodsi pracownicy z działu handel i serwis</h3>");
 echo("<li>".$sql."</li>");
-table3($sql, $conn, "najstarszy pracownik", 'najstarszy');
+table3($sql, $conn, "najmlodszy pracownik", 'najmlodszy');
 
 $sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM pracownicy, organizacja where dzial = id_org and dzial in(1, 2) group by dzial';
 echo("<h2>Zadanie 11</h2>");
