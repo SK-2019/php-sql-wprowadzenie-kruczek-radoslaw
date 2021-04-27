@@ -26,7 +26,7 @@
             require_once("../assets/connect.php");
 
             function table($sql){
-                
+
                 $result = $conn->query($sql);
                 echo("<table border=0>");
                 echo("<th>id_pracownicy</th>");
@@ -40,7 +40,6 @@
                     echo("</tr>");
                 }
                 echo("</table>");
-                $conn->close();
             }
 
             //include("../assets/functions.php");
