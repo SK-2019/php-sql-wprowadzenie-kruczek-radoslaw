@@ -19,6 +19,8 @@
         
         <?php
 
+            global $sql;
+
             function table($sql){
                 require_once("../assets/connect.php");
                 $result = $conn->query($sql);
