@@ -23,6 +23,9 @@
             ini_set('display_startup_errors', '1');
             error_reporting(E_ALL);
 
+            global $conn;
+
+
             function table($sql){
                 require_once("../assets/connect.php");
                 $result = $conn->query($sql);
@@ -46,7 +49,7 @@
             //$p = "SELECT * FROM pracownicy, organizacja where dzial = id_org";
             echo("<h2>Zadanie 1</h2>");
             echo("<h3>Pracownicy tylko z działu 2</h3>");
-            echo("<li>".$p);
+            //echo("<li>".$p);
             // $result = $conn->query($sql);
             // echo("<table border=0>");
             // echo("<th>id_pracownicy</th>");
@@ -65,7 +68,7 @@
             //$sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
             echo("<h2>Zadanie 2</h2>");
             echo("<h3>Pracownicy tylko z działu 2 i z działu 3</h3>");
-            echo("<li>".$sql);
+            //echo("<li>".$sql);
             table('SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)');
 /*
             $sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and zarobki < 30';
