@@ -24,7 +24,7 @@
           require_once("../assets/connect.php");
       
       
-          function table($sql, $conn, $columnid, $column2, $dana){
+          function table($sql, $conn, $columnid, $column2, $dana, $dana2){
       
             $result = $conn->query($sql);
             echo("<table border=0>");
@@ -32,7 +32,7 @@
             echo("<th>$column2</th>");
             while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
-              echo("<td>".$wiersz[$columnid]."</td><td>".$wiersz[$dana]."</td>");
+              echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td>");
               echo("</tr>");
             }
             echo("</table>");
@@ -41,29 +41,17 @@
           $sql = "SELECT * FROM lekarze";
           echo("<h3>Lekarze</h3>");
           echo("<li>".$sql);
-          table($sql, $conn, "id_lekarza", "nazwisko", 'nazwisko');
+          table($sql, $conn, "id_lekarza", "nazwisko", 'nazwisko', 'id_lekarza');
 
           $sql = "SELECT * FROM pacjenci";
           echo("<h3>Pacjenci</h3>");
           echo("<li>".$sql);
-          table($sql, $conn, "id_pacjenta", "imie", 'imie');
+          table($sql, $conn, "id_pacjenta", "imie", 'imie', 'id_pacjenta');
 
           $sql = "SELECT * FROM lekarze, pacjenci, lek_pac where lekarz = id_lekarza and pacjent = id_pacjenta ";
           echo("<h3>Lekarze I Pacjenci</h3>");
           echo("<li>".$sql);
-          $result = $conn->query($sql) or die($conn->error);
-          echo("<table border=0>");
-          echo("<th>id</th>");
-          echo("<th>lekarz</th>");
-          echo("<th>pacjent</th>");
-
-          while($wiersz=$result->fetch_assoc()){
-              echo("<tr>");
-              echo("<td>".$wiersz['id']."</td><td>".$wiersz['nazwisko']."</td><td>".$wiersz['imie']."</td>");
-              echo("</tr>");
-          }
-          echo("</table>");
-          table($sql, $conn, "nazwisko", "pacjent", 'imie');
+          table($sql, $conn, "lekarz", "pacjent", 'imie', 'nazwisko');
         ?>
       </div>
     </div>
