@@ -18,21 +18,33 @@
       </div>
       <div class="main">
       <?php
-      require_once("../assets/connect.php");
+
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
+    require_once("../assets/connect.php");
+
+
+    function table($sql, $conn, $columnid, $column2, $dana){
+
+      $result = $conn->query($sql) or die($conn->error);
+      echo("<table border=0>");
+      echo("<th>".$columnid."</th>");
+      echo("<th>.$column2.</th>");
+      while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id_autor']."</td><td>".$wiersz[$dana]."</td>");
+        echo("</tr>");
+      }
+      echo("</table>");
+    }
+
+
     $sql = "SELECT * FROM autor";
     echo("<h3>Autorzy</h3>");
     echo("<li>".$sql);
-    $result = $conn->query($sql) or die($conn->error);
-    echo("<table border=0>");
-    echo("<th>id_autor</th>");
-    echo("<th>nazwisko</th>");
-
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['id_autor']."</td><td>".$wiersz['nazwisko']."</td>");
-        echo("</tr>");
-    }
-    echo("</table>");
+    table($sql, $conn, "id_autor", "autor", "nazwisko")
 
     $sql = "SELECT * FROM tytul";
     echo("<h3>Tytuły</h3>");
