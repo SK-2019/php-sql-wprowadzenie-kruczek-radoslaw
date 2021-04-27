@@ -25,7 +25,7 @@
 
             require_once("../assets/connect.php");
 
-            function table($sql){
+            function table($sql, $conn){
 
                 $result = $conn->query($sql);
                 echo("<table border=0>");
@@ -61,7 +61,7 @@
             //     echo("</tr>");
             // }
             // echo("</table>");
-            table("SELECT * FROM pracownicy, organizacja where dzial = id_org");
+            table("SELECT * FROM pracownicy, organizacja where dzial = id_org", $conn);
             
             //$sql = 'SELECT * FROM pracownicy, organizacja where dzial = id_org and dzial in(2, 3)';
             echo("<h2>Zadanie 2</h2>");
