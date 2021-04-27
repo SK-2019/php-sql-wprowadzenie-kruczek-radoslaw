@@ -51,18 +51,6 @@
           $sql = "SELECT * FROM lekarze, pacjenci, lek_pac where lekarz = id_lekarza and pacjent = id_pacjenta ";
           echo("<h3>Lekarze I Pacjenci</h3>");
           echo("<li>".$sql);
-          $result = $conn->query($sql) or die($conn->error);
-          echo("<table border=0>");
-          echo("<th>id</th>");
-          echo("<th>lekarz</th>");
-          echo("<th>pacjent</th>");
-
-          while($wiersz=$result->fetch_assoc()){
-              echo("<tr>");
-              echo("<td>".$wiersz['id']."</td><td>".$wiersz['nazwisko']."</td><td>".$wiersz['imie']."</td>");
-              echo("</tr>");
-          }
-          echo("</table>");
           table($sql, $conn, "lekarz", "pacjent", 'pacjent');
         ?>
       </div>
