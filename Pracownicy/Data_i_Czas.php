@@ -18,38 +18,42 @@
     <div class="main">
 
 <?php
+
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+
+require_once("../assets/connect.php");
+
+function table($sql, $conn){
+
+    $result = $conn->query($sql);
+    echo("<table border=0>");
+    echo("<th>id_pracownicy</th>");
+    echo("<th>imie</th>");
+    echo("<th>nazwa_dzial</th>");
+    ech("<th>wiek</th>");
+    while($wiersz=$result->fetch_assoc()){
+        echo("<tr>");
+        echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz['data_urodzenia']."</td>");
+        echo("</tr>");
+    }
+    echo("</table>");
+}
+
+
 require_once("../assets/connect.php");
 $sql = 'SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja where dzial=id_org;';
 echo("<h2>Zadanie 1</h2>");
 echo("<h3>wiek poszczególnych pracowników</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>imie</th>");
-echo("<th>nazwa_dzial</th>");
-echo("<th>wiek</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['wiek']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
+table($sql, $conn);
 
 $sql = 'SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 1';
 echo("<h2>Zadanie 2</h2>");
 echo("<h3>wiek poszczególnych pracowników z działu serwis</h3>");
 echo("<li>".$sql);
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>imie</th>");
-echo("<th>nazwa_dzial</th>");
-echo("<th>wiek</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['wiek']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
+table($sql, $conn);
 
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 3</h2>");
