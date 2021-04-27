@@ -23,11 +23,10 @@
             ini_set('display_startup_errors', '1');
             error_reporting(E_ALL);
 
-            global $conn;
-
+            require_once("../assets/connect.php");
 
             function table($sql){
-                require_once("../assets/connect.php");
+                
                 $result = $conn->query($sql);
                 echo("<table border=0>");
                 echo("<th>id_pracownicy</th>");
