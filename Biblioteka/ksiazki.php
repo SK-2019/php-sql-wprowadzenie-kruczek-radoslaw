@@ -31,7 +31,7 @@
 
 $sql = ("SELECT * from biblAutor, biblTytul, biblwypoz where wypautor_id=autor_id and wyptytul_id=tytul_id");
 echo("<h2>Wypożyczone Książki</h2>");
-echo("<li>".$sql);
+echo("<li>".$sql."</li>");
 $result = $conn->query($sql);
 echo("<table border=0>");
 echo("<th>id</th>");

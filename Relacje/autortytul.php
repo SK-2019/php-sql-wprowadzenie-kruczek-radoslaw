@@ -43,17 +43,17 @@
 
     $sql = "SELECT * FROM autor";
     echo("<h3>Autorzy</h3>");
-    echo("<li>".$sql);
+    echo("<li>".$sql."</li>");
     table($sql, $conn, "id_autor", "autor", 'nazwisko');
 
     $sql = "SELECT * FROM tytul";
     echo("<h3>Tytuły</h3>");
-    echo("<li>".$sql);
+    echo("<li>".$sql."</li>");
     table($sql, $conn, "id_tytul", "tytul", 'tytul');
 
     $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul';
     echo("<h3>Autorzy i Tytuły</h3>");
-    echo("<li>".$sql);
+    echo("<li>".$sql."</li>");
     table($sql, $conn, "nazwisko", "tytul", 'tytul');
     ?>
       </div>

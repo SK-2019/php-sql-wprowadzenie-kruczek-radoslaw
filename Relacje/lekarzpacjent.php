@@ -40,17 +40,17 @@
 
           $sql = "SELECT * FROM lekarze";
           echo("<h3>Lekarze</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "id_lekarza", "nazwisko", 'nazwisko', 'id_lekarza');
 
           $sql = "SELECT * FROM pacjenci";
           echo("<h3>Pacjenci</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "id_pacjenta", "imie", 'imie', 'id_pacjenta');
 
           $sql = "SELECT * FROM lekarze, pacjenci, lek_pac where lekarz = id_lekarza and pacjent = id_pacjenta ";
           echo("<h3>Lekarze I Pacjenci</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "lekarz", "pacjent", 'imie', 'nazwisko');
         ?>
       </div>

@@ -39,17 +39,17 @@
 
           $sql = "SELECT * FROM pracownik";
           echo("<h3>Pracownicy</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "id", "imie", 'imie', 'id_pracownika');
 
           $sql = "SELECT * FROM projekt";
           echo("<h3>Projekty</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "id_projektu", "projekt", 'nazwa', 'id_projektu');
 
           $sql = "SELECT * FROM pracownik, projekt, prac_proj where pracownik = id_pracownika and projekt = id_projektu";
           echo("<h3>Pracownicy i projekty</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "pracownik", "projekt", 'nazwa', 'imie');
 
           ?>

@@ -40,17 +40,17 @@
           
           $sql = "SELECT * FROM nauczyciele";
           echo("<h3>Nauczyciele</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "id_Nauczyciela", "nazwisko", 'nazwisko', 'id_Nauczyciela');
 
           $sql = "SELECT * FROM klasy";
           echo("<h3>Klasy</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "id_klasy", "klasa", 'klasa', 'id_klasy');
 
           $sql = "SELECT * FROM nauczyciele, klasy, naucz_klasa where nazwa_nauczyciel = id_Nauczyciela and nazwa_klasa = id_klasy ";
           echo("<h3>Nauczyciele i Klasy</h3>");
-          echo("<li>".$sql);
+          echo("<li>".$sql."</li>");
           table($sql, $conn, "nauczyciel", "klasa", 'nazwisko', 'klasa');
         ?>
       </div>
