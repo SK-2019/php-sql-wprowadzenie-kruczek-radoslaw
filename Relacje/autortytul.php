@@ -30,8 +30,8 @@
 
       $result = $conn->query($sql) or die($conn->error);
       echo("<table border=0>");
-      echo("<th>".$columnid."</th>");
-      echo("<th>".$column2."</th>");
+      echo("<th>$columnid</th>");
+      echo("<th>$column2</th>");
       while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
         echo("<td>".$wiersz['id_autor']."</td><td>".$wiersz[$dana]."</td>");
