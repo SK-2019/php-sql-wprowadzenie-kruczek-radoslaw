@@ -41,17 +41,6 @@
           $sql = "SELECT * FROM mechanicy";
           echo("<h3>Mechanicy</h3>");
           echo("<li>".$sql);
-          $result = $conn->query($sql) or die($conn->error);
-          echo("<table border=0>");
-          echo("<th>id_mechanika</th>");
-          echo("<th>nazwisko</th>");
-
-          while($wiersz=$result->fetch_assoc()){
-              echo("<tr>");
-              echo("<td>".$wiersz['id_mechanika']."</td><td>".$wiersz['nazwisko']."</td>");
-              echo("</tr>");
-          }
-          echo("</table>");
           table($sql, $conn, "id_mechanika", "nazwisko", 'nazwisko', 'id_mechanika');
 
           $sql = "SELECT * FROM samochody";
