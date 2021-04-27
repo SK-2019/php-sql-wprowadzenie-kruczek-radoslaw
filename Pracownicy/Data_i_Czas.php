@@ -55,18 +55,35 @@ function table2($sql, $conn){
 echo("</table>");
 }
 
-function table3($sql, $conn){
+function table3($sql, $conn, $column, $dana){
 
     $result = $conn->query($sql);
     echo("<table border=0>");
-    echo("<th>średnia</th>");
+    echo("<th>$column</th>");
     echo("<th>dzial</th>");
         while($wiersz=$result->fetch_assoc()){
             echo("<tr>");
-            echo("<td>".$wiersz['srednia_wiek']."</td><td>".$wiersz['nazwa_dzial']."</td>");
+            echo("<td>".$wiersz[$dana]."</td><td>".$wiersz['nazwa_dzial']."</td>");
             echo("</tr>");
         }
     echo("</table>");
+}
+
+function table4($sql, $conn, $column, $dana){
+
+    $result = $conn->query($sql);
+    echo("<table border=0>");
+    echo("<th>dzial</th>");
+    echo("<th>$column</th>");
+    echo("<th>wiek</th>");
+        while($wiersz=$result->fetch_assoc()){
+            echo("<tr>");
+            echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td><td>".$wiersz[$dana]."</td>");
+            echo("</tr>");
+        }
+    echo("</table>");
+
+
 }
 
 require_once("../assets/connect.php");
@@ -110,7 +127,7 @@ $sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM
 echo("<h2>Zadanie 7</h2>");
 echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
 echo("<li>".$sql."</li>");
-table3($sql, $conn);
+table3($sql, $conn, "średnia lat", 'srednia_wiek');
 
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 8</h2>");
@@ -122,48 +139,19 @@ $sql = 'SELECT *, max(YEAR(curdate())-YEAR(data_urodzenia)) AS najstarszy FROM p
 echo("<h2>Zadanie 9</h2>");
 echo("<h3>najstarsi pracownicy w każdym dziale</h3>");
 echo("<li>".$sql."</li>");
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>dzial</th>");
-echo("<th>najstarszy pracownik</th>");
-echo("<th>wiek</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['najstarszy']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
+table4($sql, $conn, "najstarszy pracownik", 'najstarszy');
 
 $sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM pracownicy, organizacja where dzial = id_org and dzial in(1, 2) group by dzial';
 echo("<h2>Zadanie 10</h2>");
 echo("<h3>najmłodsi pracownicy z działu handel i serwis</h3>");
 echo("<li>".$sql."</li>");
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>dzial</th>");
-echo("<th>wiek</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['najmlodszy']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
+table3($sql, $conn, "najstarszy pracownik", 'najstarszy');
 
 $sql = 'SELECT *, min(YEAR(curdate())-YEAR(data_urodzenia)) AS najmlodszy FROM pracownicy, organizacja where dzial = id_org and dzial in(1, 2) group by dzial';
 echo("<h2>Zadanie 11</h2>");
 echo("<h3>najmłodsi pracownicy z działu handel i serwis</h3>");
 echo("<li>".$sql."</li>");
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>dzial</th>");
-echo("<th>najmłodszy pracownik</th>");
-echo("<th>wiek</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['najmlodszy']."</td>");
-        echo("</tr>");
-    }
-echo("</table>");
+table4($sql, $conn, "najmłodszy pracownik", 'najmlodszy');
 
 $sql = 'SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) AS dni_zycia FROM pracownicy';
 echo("<h2>Zadanie 12</h2>");
