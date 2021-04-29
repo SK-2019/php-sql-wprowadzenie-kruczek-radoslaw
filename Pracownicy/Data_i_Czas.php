@@ -194,7 +194,7 @@ echo("<h2>Zadanie 13</h2>");
 echo("<h3>najstarszy mężczyzna</h3>");
 echo("<li>".$sql."</li>");
 table($sql, $conn, 'data_urodzenia');
-/*
+
 $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W") from pracownicy';
 echo("<h2>Zadanie 14</h2>");
 echo("<h3>wyświetl nazwy dni w dacie urodzenia</h3>");
@@ -270,7 +270,7 @@ echo("<h2>Zadanie 23</h2>");
 echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
 echo("<li>".$sql."</li>");
 table3($sql, $conn, "dzień tygodnia", "ilość osób", 'dzien', 'ilosc');
-*/
+
 ?>
     </div>
 </div>
