@@ -25,18 +25,18 @@ error_reporting(E_ALL);
 
 require_once("../assets/connect.php");
 
-function table($sql, $conn, $dana){
+function table($sql, $conn, $dana, $dana2){
 
     $result = $conn->query($sql);
     echo("<table border=0>");
     echo("<th>id_pracownicy</th>");
     echo("<th>imie</th>");
-    echo("<th>nazwa_dzial</th>");
+    echo("<th>dzial</th>");
     echo("<th>wiek</th>");
     echo("<th>data urodzenia</th>");
     while($wiersz=$result->fetch_assoc()){
         echo("<tr>");
-        echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz[$dana]."</td>");
+        echo("<td>".$wiersz['id_pracownicy']."</td><td>".$wiersz['imie']."</td><td>".$wiersz[$dana2]."</td><td>".$wiersz['zarobki']."</td><td>".$wiersz[$dana]."</td>");
         echo("</tr>");
     }
     echo("</table>");
@@ -85,7 +85,7 @@ function table4($sql, $conn, $column, $column2, $column3, $dana, $dana2, $dana3)
 
 
 }
-function table5($sql, $sql2, $conn, $dana){
+function table5($sql1, $sql2, $conn, $dana){
 
     $result = $conn->query($sql1);
     $result = $conn->query($sql2);
@@ -121,13 +121,13 @@ $sql = 'SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, 
 echo("<h2>Zadanie 1</h2>");
 echo("<h3>wiek poszczególnych pracowników</h3>");
 echo("<li>".$sql."</li>");
-table($sql, $conn, 'data_urodzenia');
+table($sql, $conn, 'data_urodzenia', 'nazwa_dzial');
 
 $sql = 'SELECT * ,YEAR(curdate())-YEAR(data_urodzenia) AS wiek FROM pracownicy, organizacja where dzial = id_org and dzial = 1';
 echo("<h2>Zadanie 2</h2>");
 echo("<h3>wiek poszczególnych pracowników z działu serwis</h3>");
 echo("<li>".$sql."</li>");
-table($sql, $conn, 'data_urodzenia');
+table($sql, $conn, 'data_urodzenia', 'nazwa_dzial');
 
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 3</h2>");
@@ -193,13 +193,13 @@ $sql = 'SELECT * FROM pracownicy, organizacja WHERE dzial = id_org and imie NOT 
 echo("<h2>Zadanie 13</h2>");
 echo("<h3>najstarszy mężczyzna</h3>");
 echo("<li>".$sql."</li>");
-table($sql, $conn, 'data_urodzenia');
+table($sql, $conn, 'data_urodzenia', 'nazwa_dzial');
 
-$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W") from pracownicy';
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W") from pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 14</h2>");
 echo("<h3>wyświetl nazwy dni w dacie urodzenia</h3>");
 echo("<li>".$sql."</li>");
-table($sql ,$conn, 'DATE_FORMAT(data_urodzenia,"%W")');
+table($sql ,$conn, 'DATE_FORMAT(data_urodzenia,"%W")', 'nazwa_dzial');
 
 $sql1 = 'SET lc_time_names = "pl_PL"';
 $sql2 = 'SELECT DATE_FORMAT(CURDATE(), "%W") as data';
@@ -209,11 +209,11 @@ echo("<li>".$sql1);
 echo("<li>".$sql2);
 table5($sql, $sql2, $conn, 'data');
 
-$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%M") from pracownicy';
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%M") from pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 16</h2>");
 echo("<h3>wyświetl nazwy miesięcy w dacie urodzenia</h3>");
 echo("<li>".$sql."</li>");
-table($sql ,$conn, 'DATE_FORMAT(data_urodzenia,"%M")');
+table($sql ,$conn, 'DATE_FORMAT(data_urodzenia,"%M")', 'nazwa_dzial');
 
 $sql = 'SELECT curtime(4) as godzina';
 echo("<h2>Zadanie 17</h2>");
@@ -221,11 +221,11 @@ echo("<h3>Obecna, dokładna godzina</h3>");
 echo("<li>".$sql."</li>");
 table2($sql, $conn, "godzina", 'godzina');
 
-$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy';
+$sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%Y-%M-%W") from pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 18</h2>");
 echo("<h3>Wyświetl datę urodzenia w formie: rok-miesiąc-dzień</h3>");
 echo("<li>".$sql."</li>");
-table($sql ,$conn, 'DATE_FORMAT(data_urodzenia,"%Y-%M-%W")');
+table($sql ,$conn, 'DATE_FORMAT(data_urodzenia,"%Y-%M-%W")', 'nazwa_dzial');
 
 $sql = 'SELECT imie,DATEDIFF(CURDATE(),data_urodzenia) as dni, DATEDIFF(CURDATE(),data_urodzenia)*24 as godziny, DATEDIFF(CURDATE(),data_urodzenia)*24*60 as minuty FROM pracownicy';
 echo("<h2>Zadanie 19</h2>");
