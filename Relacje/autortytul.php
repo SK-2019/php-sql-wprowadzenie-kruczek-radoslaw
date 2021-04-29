@@ -10,52 +10,51 @@
   <body>
     <div class="container">
       <div class="header">
-       
         <?php include("../assets/header.php"); ?>
       </div>
       <div class="menu">
        <?php include("../assets/menu.php"); ?>
       </div>
       <div class="main">
-      <?php
+        <?php
 
-    ini_set('display_errors', '1');
-    ini_set('display_startup_errors', '1');
-    error_reporting(E_ALL);
+          ini_set('display_errors', '1');
+          ini_set('display_startup_errors', '1');
+          error_reporting(E_ALL);
 
-    require_once("../assets/connect.php");
-
-
-    function table($sql, $conn, $columnid, $column2, $dana){
-
-      $result = $conn->query($sql);
-      echo("<table border=0>");
-      echo("<th>$columnid</th>");
-      echo("<th>$column2</th>");
-      while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz[$columnid]."</td><td>".$wiersz[$dana]."</td>");
-        echo("</tr>");
-      }
-      echo("</table>");
-    }
+          require_once("../assets/connect.php");
 
 
-    $sql = "SELECT * FROM autor";
-    echo("<h3>Autorzy</h3>");
-    echo("<li>".$sql."</li>");
-    table($sql, $conn, "id_autor", "autor", 'nazwisko');
+          function table($sql, $conn, $columnid, $column2, $dana){
 
-    $sql = "SELECT * FROM tytul";
-    echo("<h3>Tytuły</h3>");
-    echo("<li>".$sql."</li>");
-    table($sql, $conn, "id_tytul", "tytul", 'tytul');
+            $result = $conn->query($sql);
+            echo("<table border=0>");
+            echo("<th>$columnid</th>");
+            echo("<th>$column2</th>");
+            while($wiersz=$result->fetch_assoc()){
+              echo("<tr>");
+              echo("<td>".$wiersz[$columnid]."</td><td>".$wiersz[$dana]."</td>");
+              echo("</tr>");
+            }
+            echo("</table>");
+          }
 
-    $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul';
-    echo("<h3>Autorzy i Tytuły</h3>");
-    echo("<li>".$sql."</li>");
-    table($sql, $conn, "nazwisko", "tytul", 'tytul');
-    ?>
+
+          $sql = "SELECT * FROM autor";
+          echo("<h3>Autorzy</h3>");
+          echo("<li>".$sql."</li>");
+          table($sql, $conn, "id_autor", "autor", 'nazwisko');
+
+          $sql = "SELECT * FROM tytul";
+          echo("<h3>Tytuły</h3>");
+          echo("<li>".$sql."</li>");
+          table($sql, $conn, "id_tytul", "tytul", 'tytul');
+
+          $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul';
+          echo("<h3>Autorzy i Tytuły</h3>");
+          echo("<li>".$sql."</li>");
+          table($sql, $conn, "nazwisko", "tytul", 'tytul');
+        ?>
       </div>
     </div>
   </body>
