@@ -152,7 +152,7 @@ echo("<h2>Zadanie 6</h2>");
 echo("<h3>suma lat mężczyzn z działu handel</h3>");
 echo("<li>".$sql."</li>");
 table2($sql, $conn, "suma lat", 'suma_wiek');
-
+/*
 $sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 7</h2>");
 echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
@@ -270,6 +270,7 @@ echo("<h2>Zadanie 23</h2>");
 echo("<h3>Ilu pracowników urodziło się w poszczególne dni tygodnia</h3>");
 echo("<li>".$sql."</li>");
 table3($sql, $conn, "dzień tygodnia", "ilość osób", 'dzien', 'ilosc');
+*/
 ?>
     </div>
 </div>
