@@ -100,7 +100,7 @@ function table5($sql, $sql2, $conn, $dana){
     echo("</table>");
 }
 
-table6($sql, $conn){
+function table6($sql, $conn){
     $result = $conn->query($sql);
     echo("<table border=0>");
     echo("<th>imie</th>");
@@ -128,7 +128,7 @@ echo("<h2>Zadanie 2</h2>");
 echo("<h3>wiek poszczególnych pracowników z działu serwis</h3>");
 echo("<li>".$sql."</li>");
 table($sql, $conn, 'data_urodzenia');
-
+/*
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 3</h2>");
 echo("<h3>suma lat wszystkich pracowników</h3>");
@@ -152,7 +152,7 @@ echo("<h2>Zadanie 6</h2>");
 echo("<h3>suma lat mężczyzn z działu handel</h3>");
 echo("<li>".$sql."</li>");
 table2($sql, $conn, "suma lat", 'suma_wiek');
-/*
+
 $sql = 'SELECT * ,avg(YEAR(curdate())-YEAR(data_urodzenia)) AS srednia_wiek FROM pracownicy, organizacja where dzial = id_org group by dzial';
 echo("<h2>Zadanie 7</h2>");
 echo("<h3>średnia lat pracowników w poszczególnych działach</h3>");
