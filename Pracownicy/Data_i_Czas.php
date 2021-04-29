@@ -128,7 +128,7 @@ echo("<h2>Zadanie 2</h2>");
 echo("<h3>wiek poszczególnych pracowników z działu serwis</h3>");
 echo("<li>".$sql."</li>");
 table($sql, $conn, 'data_urodzenia');
-/*
+
 $sql = 'SELECT * ,sum(YEAR(curdate())-YEAR(data_urodzenia)) AS suma_wiek FROM pracownicy, organizacja where dzial = id_org';
 echo("<h2>Zadanie 3</h2>");
 echo("<h3>suma lat wszystkich pracowników</h3>");
@@ -194,7 +194,7 @@ echo("<h2>Zadanie 13</h2>");
 echo("<h3>najstarszy mężczyzna</h3>");
 echo("<li>".$sql."</li>");
 table($sql, $conn, 'data_urodzenia');
-
+/*
 $sql = 'SELECT *, DATE_FORMAT(data_urodzenia,"%W") from pracownicy';
 echo("<h2>Zadanie 14</h2>");
 echo("<h3>wyświetl nazwy dni w dacie urodzenia</h3>");
