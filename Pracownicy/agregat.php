@@ -145,16 +145,6 @@ $sql = 'SELECT nazwa_dzial, count(imie) FROM pracownicy, organizacja where dzial
 echo("<h2>Zadanie 16</h2>");
 echo("<h3>ilość pracowników w poszczególnych działach większa niż 3</h3>");
 echo("<li>".$sql."</li>");
-$result = $conn->query($sql);
-echo("<table border=0>");
-echo("<th>nazwa_dzial</th>");
-echo("<th>ilość_pracowników</th>");
-    while($wiersz=$result->fetch_assoc()){
-        echo("<tr>");
-        echo("<td>".$wiersz['nazwa_dzial']."</td><td>".$wiersz['count(imie)']."</td>"); 
-        echo("</tr>");
-    }
-echo("</table>");
 table2($sql ,$conn, "nazwa_dzial", "ilość pracowników", 'nazwa_dzial', 'count(imie)');
 ?>
     </div>
