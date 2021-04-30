@@ -56,7 +56,7 @@
             $sql = "SELECT * FROM samochody";
             echo("<h3>Samochody</h3>");
             echo("<li>".$sql."</li>");
-            table($sql, $conn, "id_auta", "model", 'model', 'id_auta');
+            table($sql, $conn, "id_auta", "model", 'model', 'id_auta', 'samochody');
 
             $sql = "SELECT * FROM mechanicy, samochody, auto_mech where mechanik = id_mechanika and auto = id_auta";
             echo("<h3>Mechanicy i Samochody</h3>");
