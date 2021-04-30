@@ -16,7 +16,7 @@ echo $sql;
 
 if ($conn->query($sql) === TRUE) {
   echo ("<h2>Record deleted successfully</h2>");
-  header('Location: autortytul.php');
+
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
