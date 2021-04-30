@@ -33,7 +33,17 @@
             echo("<th>$column2</th>");
             while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
-              echo("<td>".$wiersz[$columnid]."</td><td>".$wiersz[$dana]."</td>");
+              echo("<td>".$wiersz[$columnid]."</td><td>".$wiersz[$dana]."</td><td>
+		
+		
+              <form action='delete.php' method='POST'>
+                   <input type='number' name='row' value='".$wiersz[$columnid]."' hidden></br>
+                   <input type='number' name='table' value='autor' hidden></br>
+                   <input type='number' name='column' value=$columnid hidden></br>
+                   <input type='submit' value='Usuń'>
+              </form>
+              
+              </td>");
               echo("</tr>");
             }
             echo("</table>");
