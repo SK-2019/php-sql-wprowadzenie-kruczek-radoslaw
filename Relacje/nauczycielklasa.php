@@ -24,7 +24,7 @@
           require_once("../assets/connect.php");
       
       
-          function table($sql, $conn, $columnid, $column2, $dana, $dana2){
+          function table($sql, $conn, $columnid, $column2, $dana, $dana2, $table){
       
             $result = $conn->query($sql);
             echo("<table border=0>");
@@ -32,7 +32,17 @@
             echo("<th>$column2</th>");
             while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
-              echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td>");
+              echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td><td>
+		
+		
+              <form action='delete.php' method='POST'>
+                   <input type='number' name='row' value='".$wiersz[$dana2]."' hidden>
+                   <input type='number' name='table' value=$table hidden>
+                   <input type='number' name='column' value=$columnid hidden>
+                   <input type='submit' value='Usuń'>
+              </form>
+              
+              </td>");
               echo("</tr>");
             }
             echo("</table>");
@@ -41,17 +51,17 @@
           $sql = "SELECT * FROM nauczyciele";
           echo("<h3>Nauczyciele</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "id_Nauczyciela", "nazwisko", 'nazwisko', 'id_Nauczyciela');
+          table($sql, $conn, "id_Nauczyciela", "nazwisko", 'nazwisko', 'id_Nauczyciela', 'nauczyciele');
 
           $sql = "SELECT * FROM klasy";
           echo("<h3>Klasy</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "id_klasy", "klasa", 'klasa', 'id_klasy');
+          table($sql, $conn, "id_klasy", "klasa", 'klasa', 'id_klasy', 'klasy');
 
           $sql = "SELECT * FROM nauczyciele, klasy, naucz_klasa where nazwa_nauczyciel = id_Nauczyciela and nazwa_klasa = id_klasy ";
           echo("<h3>Nauczyciele i Klasy</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "nauczyciel", "klasa", 'nazwisko', 'klasa');
+          table($sql, $conn, "nauczyciel", "klasa", 'nazwisko', 'klasa', 'naucz_klasa');
         ?>
       </div>
     </div>

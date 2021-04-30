@@ -24,7 +24,7 @@
           require_once("../assets/connect.php");
       
       
-          function table($sql, $conn, $columnid, $column2, $dana, $dana2){
+          function table($sql, $conn, $columnid, $column2, $dana, $dana2, $table){
       
             $result = $conn->query($sql);
             echo("<table border=0>");
@@ -32,7 +32,17 @@
             echo("<th>$column2</th>");
             while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
-              echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td>");
+              echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td><td>
+		
+		
+              <form action='delete.php' method='POST'>
+                   <input type='number' name='row' value='".$wiersz[$dana2]."' hidden>
+                   <input type='number' name='table' value=$table hidden>
+                   <input type='number' name='column' value=$columnid hidden>
+                   <input type='submit' value='Usuń'>
+              </form>
+              
+              </td>");
               echo("</tr>");
             }
             echo("</table>");
@@ -41,17 +51,17 @@
           $sql = "SELECT * FROM lekarze";
           echo("<h3>Lekarze</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "id_lekarza", "nazwisko", 'nazwisko', 'id_lekarza');
+          table($sql, $conn, "id_lekarza", "nazwisko", 'nazwisko', 'id_lekarza', 'lekarze');
 
           $sql = "SELECT * FROM pacjenci";
           echo("<h3>Pacjenci</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "id_pacjenta", "imie", 'imie', 'id_pacjenta');
+          table($sql, $conn, "id_pacjenta", "imie", 'imie', 'id_pacjenta', 'pacjenci');
 
           $sql = "SELECT * FROM lekarze, pacjenci, lek_pac where lekarz = id_lekarza and pacjent = id_pacjenta ";
           echo("<h3>Lekarze I Pacjenci</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "lekarz", "pacjent", 'imie', 'nazwisko');
+          table($sql, $conn, "lekarz", "pacjent", 'imie', 'nazwisko', 'lek_pac');
         ?>
       </div>
     </div>

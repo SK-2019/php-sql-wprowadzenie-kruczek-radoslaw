@@ -23,7 +23,7 @@
 
             require_once("../assets/connect.php");
 
-            function table($sql, $conn, $columnid, $column2, $dana, $dana2){
+            function table($sql, $conn, $columnid, $column2, $dana, $dana2, $table){
 
               $result = $conn->query($sql);
               echo("<table border=0>");
@@ -31,7 +31,17 @@
               echo("<th>$column2</th>");
               while($wiersz=$result->fetch_assoc()){
                 echo("<tr>");
-                echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td>");
+                echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td><td>
+		
+		
+                <form action='delete.php' method='POST'>
+                     <input type='number' name='row' value='".$wiersz[$dana2]."' hidden>
+                     <input type='number' name='table' value=$table hidden>
+                     <input type='number' name='column' value=$columnid hidden>
+                     <input type='submit' value='Usuń'>
+                </form>
+                
+                </td>");
                 echo("</tr>");
               }
               echo("</table>");
@@ -40,17 +50,17 @@
             $sql = "SELECT * FROM pracownik";
             echo("<h3>Pracownicy</h3>");
             echo("<li>".$sql."</li>");
-            table($sql, $conn, "id", "imie", 'imie', 'id_pracownika');
+            table($sql, $conn, "id", "imie", 'imie', 'id_pracownika', 'pracownik');
 
             $sql = "SELECT * FROM projekt";
             echo("<h3>Projekty</h3>");
             echo("<li>".$sql."</li>");
-            table($sql, $conn, "id_projektu", "projekt", 'nazwa', 'id_projektu');
+            table($sql, $conn, "id_projektu", "projekt", 'nazwa', 'id_projektu', 'projekt');
 
             $sql = "SELECT * FROM pracownik, projekt, prac_proj where pracownik = id_pracownika and projekt = id_projektu";
             echo("<h3>Pracownicy i projekty</h3>");
             echo("<li>".$sql."</li>");
-            table($sql, $conn, "pracownik", "projekt", 'nazwa', 'imie');
+            table($sql, $conn, "pracownik", "projekt", 'nazwa', 'imie', 'prac_proj');
 
           ?>
       </div>

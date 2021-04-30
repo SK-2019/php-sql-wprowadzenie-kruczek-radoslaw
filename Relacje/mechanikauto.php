@@ -24,7 +24,7 @@
             require_once("../assets/connect.php");
         
         
-            function table($sql, $conn, $columnid, $column2, $dana, $dana2){
+            function table($sql, $conn, $columnid, $column2, $dana, $dana2, $table){
         
               $result = $conn->query($sql);
               echo("<table border=0>");
@@ -32,7 +32,17 @@
               echo("<th>$column2</th>");
               while($wiersz=$result->fetch_assoc()){
                 echo("<tr>");
-                echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td>");
+                echo("<td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td><td>
+		
+		
+                <form action='delete.php' method='POST'>
+                     <input type='number' name='row' value='".$wiersz[$dana2]."' hidden>
+                     <input type='number' name='table' value=$table hidden>
+                     <input type='number' name='column' value=$columnid hidden>
+                     <input type='submit' value='Usuń'>
+                </form>
+                
+                </td>");
                 echo("</tr>");
               }
               echo("</table>");
@@ -41,7 +51,7 @@
             $sql = "SELECT * FROM mechanicy";
             echo("<h3>Mechanicy</h3>");
             echo("<li>".$sql."</li>");
-            table($sql, $conn, "id_mechanika", "nazwisko", 'nazwisko', 'id_mechanika');
+            table($sql, $conn, "id_mechanika", "nazwisko", 'nazwisko', 'id_mechanika', 'mechanicy');
 
             $sql = "SELECT * FROM samochody";
             echo("<h3>Samochody</h3>");
@@ -51,7 +61,7 @@
             $sql = "SELECT * FROM mechanicy, samochody, auto_mech where mechanik = id_mechanika and auto = id_auta";
             echo("<h3>Mechanicy i Samochody</h3>");
             echo("<li>".$sql."</li>");
-            table($sql, $conn, "mechanik", "auto", 'model', 'nazwisko');
+            table($sql, $conn, "mechanik", "auto", 'model', 'nazwisko', 'auto_mech');
           ?>
       </div>
     </div>
