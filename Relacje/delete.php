@@ -2,7 +2,6 @@
 
 <?php
 echo("<h1>jestes w delete.php </h1>");
-echo "<li>".$_POST['id'];
 
 
 
