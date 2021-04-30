@@ -5,7 +5,7 @@ echo("<h1>jestes w delete.php </h1>");
 
 
 
-require_once("../connect.php");
+require_once("../assets/connect.php");
 
 function delete($table, $column, $row){
 //definiujemy zapytanie $sql
