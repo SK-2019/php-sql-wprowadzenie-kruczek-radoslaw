@@ -48,7 +48,7 @@ echo("<th>data_urodzenia</th>");
 		
 		
 		<form action='delete.php' method='POST'>
-   			<input type='number' name='id' value='".$wiersz['id_pracownicy']."' hidden></br>
+   			<input type='number' name='id' value='".$wiersz['id_pracownicy']."' hidden>
    			<input type='submit' value='Usuń'>
 		</form>
 		
