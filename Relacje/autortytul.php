@@ -86,7 +86,7 @@
           $sql = 'SELECT * FROM autor_tytul, autor, tytul where autor_id = id_autor and tytul_id = id_tytul';
           echo("<h3>Autorzy i Tytuły</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn,"id", "nazwisko", "tytul", 'tytul', 'nazwisko', 'autor_tytul');
+          table2($sql, $conn,"id", "nazwisko", "tytul", 'tytul', 'nazwisko', 'autor_tytul');
         ?>
       </div>
     </div>
