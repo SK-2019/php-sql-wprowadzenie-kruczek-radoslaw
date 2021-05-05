@@ -47,12 +47,13 @@
             }
             echo("</table>");
           }
-          function table2($sql, $conn, $columnid, $column2, $dana, $dana2, $dana3, $table){
+          function table2($sql, $conn, $columnid, $column2, $column3, $dana, $dana2, $dana3, $table){
       
             $result = $conn->query($sql);
             echo("<table border=0>");
             echo("<th>$columnid</th>");
             echo("<th>$column2</th>");
+            echo("<th>$column3</th>");
             while($wiersz=$result->fetch_assoc()){
               echo("<tr>");
               echo("<td>".$wiersz[$dana3]."</td><td>".$wiersz[$dana2]."</td><td>".$wiersz[$dana]."</td><td>
@@ -84,7 +85,7 @@
           $sql = "SELECT * FROM nauczyciele, klasy, naucz_klasa where nazwa_nauczyciel = id_Nauczyciela and nazwa_klasa = id_klasy ";
           echo("<h3>Nauczyciele i Klasy</h3>");
           echo("<li>".$sql."</li>");
-          table2($sql, $conn, "nauczyciel", "klasa", 'nazwisko', 'klasa', 'id', 'naucz_klasa');
+          table2($sql, $conn, "id", "nauczyciel", "klasa", 'nazwisko', 'klasa', 'id', 'naucz_klasa');
         ?>
       </div>
     </div>
