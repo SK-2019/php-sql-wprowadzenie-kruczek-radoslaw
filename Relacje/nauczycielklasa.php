@@ -84,7 +84,7 @@
           $sql = "SELECT * FROM nauczyciele, klasy, naucz_klasa where nazwa_nauczyciel = id_Nauczyciela and nazwa_klasa = id_klasy ";
           echo("<h3>Nauczyciele i Klasy</h3>");
           echo("<li>".$sql."</li>");
-          table($sql, $conn, "nauczyciel", "klasa", 'nazwisko', 'klasa', 'id', 'naucz_klasa');
+          table2($sql, $conn, "nauczyciel", "klasa", 'nazwisko', 'klasa', 'id', 'naucz_klasa');
         ?>
       </div>
     </div>
