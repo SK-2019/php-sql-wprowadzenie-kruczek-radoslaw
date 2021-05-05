@@ -40,7 +40,7 @@
               <input type='text' name='table' value='".$table."' hidden>
               <input type='text' name='column' value='".$columnid."' hidden>
               <input type='submit' value='Usuń'>
-         </form>
+              </form>
               
               </td>");
               echo("</tr>");
