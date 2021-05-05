@@ -10,7 +10,7 @@ echo("<h1>jestes w delete.php </h1>");
 
 require_once("../assets/connect.php");
 
-function delete($table, $column, $row){
+function delete($conn, $table, $column, $row){
 //definiujemy zapytanie $sql
 $sql = "DELETE  FROM $table WHERE $column = $row";
 
@@ -27,6 +27,6 @@ if ($conn->query($sql) === TRUE) {
 $conn->close();
 }
 
-delete($_POST['table'], $_POST['column'], $_POST['row']);
+delete($conn, $_POST['table'], $_POST['column'], $_POST['row']);
 
 ?>
