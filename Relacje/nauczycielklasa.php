@@ -36,9 +36,11 @@
 		
 		
               <form action='delete.php' method='POST'>
-              <input type='number' name='id' value='".$wiersz[$dana2]."' hidden>
+              <input type='number' name='row' value='".$wiersz[$dana2]."' hidden>
+              <input type='text' name='table' value='".$table."' hidden>
+              <input type='text' name='column' value='".$columnid."' hidden>
               <input type='submit' value='Usuń'>
-             </form>
+         </form>
               
               </td>");
               echo("</tr>");
