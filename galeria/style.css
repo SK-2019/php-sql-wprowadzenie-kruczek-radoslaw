@@ -31,3 +31,14 @@
   .rzad {
     background-color: rgb(25, 138, 15);
   }
+
+  .foto01_title {
+    background-color: white;
+    padding: 5px;
+    display: block;
+  }
+  .foto01_price {
+    background-color: white;
+    padding: 5px;
+    display: block;
+  }
