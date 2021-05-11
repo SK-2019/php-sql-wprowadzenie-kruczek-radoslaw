@@ -14,13 +14,7 @@
                 <div class="image foto02">2</div>
                 <div class="image foto03">3</div>
             </div>
-            <div class="gallery row">
-            <a href="#" class="image foto01">
-            </a>
-            <a href="#" class="image foto02">
-            </a>
-            <a href="#" class="image foto03">
-            </div>
+
             <div class="gallery row">
                 <div class="image foto01">1</div>
                 <div class="image foto02">2</div>
