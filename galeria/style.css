@@ -24,9 +24,7 @@
     background-image: url("https://img.travanto.de/portale/www.sylt-travel.de/fotos/4960-Kliff-Sylt.jpeg");
   }
 
-  .main {
-    display: flex;
-  }
+
 
   .rzad {
     background-color: rgb(25, 138, 15);
