@@ -9,16 +9,16 @@
     <body>
     <div class="container">
         <div class="main">
-            <div class="gallery row">
-                <div class="image foto01">1</div>
-                <div class="image foto02">2</div>
-                <div class="image foto03">3</div>
+            <div class="galeria rzad">
+                <div class="obraz fot1">1</div>
+                <div class="obraz fot2">2</div>
+                <div class="obraz fot3">3</div>
             </div>
 
-            <div class="gallery row">
-                <div class="image foto01">1</div>
-                <div class="image foto02">2</div>
-                <div class="image foto03">3</div>
+            <div class="galeria rzad">
+                <div class="obraz fot1">1</div>
+                <div class="obraz fot2">2</div>
+                <div class="obraz fot3">3</div>
             </div>
             
         </div>
