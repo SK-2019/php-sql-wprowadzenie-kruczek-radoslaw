@@ -42,3 +42,8 @@
     padding: 5px;
     display: block;
   }
+
+  .obraz:hover {
+    transform: scale(0.98);
+    filter: saturate(2.2) brightness(1.4);
+  }
