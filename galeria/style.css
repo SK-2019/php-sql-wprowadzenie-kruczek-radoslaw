@@ -27,3 +27,7 @@
   .main {
     display: flex;
   }
+
+  .row {
+    background-color: lightcoral;
+  }
