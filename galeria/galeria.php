@@ -8,12 +8,6 @@
     </head>
     <body>
     <div class="container">
-        <div class="header">
-        <?php include("assets/header.php"); ?>
-        </div>
-        <div class="menu">
-        <?php include("assets/menu.php");   ?>
-        </div>
         <div class="main">
             <div class="gallery row">
                 <div class="image foto01">1</div>
