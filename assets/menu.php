@@ -6,7 +6,7 @@
         <li><a class="navbar" href="/Dane-do-bazy/daneDoBazy.php">Dane do Bazy</a></li>
         <li><a class="navbar" href="/Biblioteka/ksiazki.php">Książki</a></li>
         <li><a class="navbar" href="/flexbox/flexbox.html">Flexbox</a></li>
-        <li><a class="navbar" href="/galeria/galeria.php">Galeria</a></li>
+        <li><a class="navbar" href="/galeria/galeria.html">Galeria</a></li>
         <li><a class="navbar" href="/index.php">strona główna</a></li>
         <li><a class="navbar" href="https://github.com/SK-2019/php-sql-wprowadzenie-kruczek-radoslaw">Github</a></li>
         <li>Relacje</li>
