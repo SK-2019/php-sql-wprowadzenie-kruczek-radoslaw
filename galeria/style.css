@@ -8,3 +8,18 @@
     background-size: cover;
     transition: 0.51s;
   }
+
+  .foto01 {
+    background-image: url("https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  .foto01:hover {
+    background-image: url("https://images.pexels.com/photos/2967394/pexels-photo-2967394.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  
+  .foto02 {
+    background-image: url("https://images.pexels.com/photos/2174656/pexels-photo-2174656.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
+  
+  .foto03 {
+    background-image: url("https://images.pexels.com/photos/722629/pexels-photo-722629.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  }
