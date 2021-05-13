@@ -14,7 +14,7 @@
     background-image: url("https://i1.wp.com/hotbook.com.mx/wp-content/uploads/2019/01/fotosparis_trocadero.jpg?resize=800%2C450&ssl=1");
   }
   .fot1:hover {
-    background-image: url("https://cdn-files.cloud/wp-content/blogs.dir/65/files/2017/07/Sonnenuntergang-Fotos-Tipps-Timing.jpg");
+    background-image: url("https://wallpaper_finder.s3.amazonaws.com/wallpapers/thumbs_2/amur-tiger-in-snow.jpg");
   }
   
   .fot2 {
@@ -41,17 +41,17 @@
   }
 
   .fot1_tytul {
-    background-color: white;
-    padding: 5px;
+    background-color: rgb(190, 179, 18);
+    padding: 7px;
     display: block;
   }
   .fot1_cena {
-    background-color: white;
-    padding: 5px;
+    background-color: rgb(190, 179, 18);
+    padding: 7px;
     display: block;
   }
 
   .obraz:hover {
-    transform: scale(0.98);
-    filter: saturate(2.2) brightness(1.4);
+    transform: scale(0.93);
+    filter: saturate(2.0) brightness(1.6);
   }
